@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 002bde655c0b7b00f63f393cbb898c00
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,beamWidth,color,cutOffAngle,direction,on,radius,intensity,castShadows
+tags: static
+license:  Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz).
+licenseUrl:  https://creativecommons.org/licenses/by/3.0/legalcode
+documentationUrl: 
+info: Simple\smodel\sof\sa\sstreet\slight\sincluding\sa\scustomizable\sSpotLight.\nThis\smodel\swas\ssponsored\sby\sthe\sCTI\sproject\sRO2IVSim\s(http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles).\n

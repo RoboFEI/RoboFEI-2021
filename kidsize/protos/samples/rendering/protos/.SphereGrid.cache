@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 06f0e196bc83e56fd1dc3a6807cd3eb2
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,color,normalMap,baseColorMap,roughnessMap,transparency,widthAndHeight
+tags: 
+license: 
+licenseUrl: 
+documentationUrl: 
+info: A\sgrid\sof\sspheres\sfor\stesting\smaterial\sproperties.\n

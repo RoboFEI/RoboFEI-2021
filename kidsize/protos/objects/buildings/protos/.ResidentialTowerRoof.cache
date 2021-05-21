@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 372089784d0c717f6234f8f39be35452
+needsRobotAncestor: 0
+baseType: Transform
+slotType: 
+parameters: translation
+tags: hidden
+license:  Creative Commons Attribution 4.0 International License.
+licenseUrl:  https://creativecommons.org/licenses/by/4.0/legalcode
+documentationUrl: 
+info: 

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 4847912de355fb53693ceabb7cd6e4a8
+needsRobotAncestor: 1
+baseType: Transform
+slotType: 
+parameters: translation,rotation,scale,children,name,model,description,contactMaterial,immersionProperties,boundingObject,physics,locked,translationStep,rotationStep,radarCrossSection,recognitionColors,type,maxVelocity,maxForce,controlP,acceleration,position,minPosition,maxPosition,minStop,maxStop,springConstant,dampingConstant,staticFriction
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\sServo\srepresents\sa\sservomotor\swhich\sadds\sone\sactive\sdegree\sof\sfreedom\s(DOF)\sin\sa\smechanical\ssimulation.\nThe\sServo\s'children'\smove\swith\srespect\sto\sthe\sServo\sparent.\nA\sServo\scan\sbe\sused\sto\ssimulate\sa\srotational\sor\sa\slinear\smotion.\nSpring\sand\sdamping\sbehavior\scan\sbe\sspecified.\nFor\sloading\sperformance\sreasons,\sit\sis\ssuggested\sto\suse\sthe\sjoint\sand\smotor\snodes\sdirectly\sinstead\sof\sthis\snode.\n

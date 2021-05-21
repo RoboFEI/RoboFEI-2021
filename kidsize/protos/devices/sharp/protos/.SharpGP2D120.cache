@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: bc402d567ed5d695cebcd9f4a4e6bd82
+needsRobotAncestor: 1
+baseType: DistanceSensor
+slotType: 
+parameters: translation,rotation,name,model
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0.
+documentationUrl: https://www.cyberbotics.com/doc/guide/distancesensor-sensors
+info: This\sis\sa\sPROTO\sfile\sfor\sWebots\sof\sthe\sGP2D120\sIR\ssensor\sfrom\sSharp.\nEffective\srange:\s4\sto\s30\scm,\sdatasheet:\shttps://www.pololu.com/file/0J157/GP2D120-DATA-SHEET.pdf\nBased\son\sthe\slookupTable,\spower\sfitting\smethod\safter\sthe\shighest\svoltage\spoint.\ny[V]\s=\sf(x[m])\s\s=>\sy\s=\s0.5131*x^(-0.5735)-0.6143\ny[m]\s=\sf(x[V])\s\s=>\sy\s=\s0.1594*x^(-0.8533)-0.02916\n

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: eb5a10089980ad4e54c751825e12b9b2
+needsRobotAncestor: 0
+baseType: Background
+slotType: 
+parameters: texture,luminosity,skybox,skyColor
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: TexturedBackground\sprovides\sa\sset\sof\sbackground\stextures,\sand\sapplies\sthem\sto\sthe\sbackground\sskybox\sand\sto\sthe\sreflections\son\sthe\s3D\sobjects.\nIt\sis\sdesigned\sto\sbe\sused\stogether\swith\sthe\sTexturedBackgroundLight\sPROTO.\n\nSupported\svalues\sfor\sthe\s`texture`\sfield:\n\n-\sdusk\n-\sempty_office\n-\sentrance_hall\n-\sfactory\n-\smars\n-\snoon_building_overcast\n-\snoon_cloudy_countryside\n-\snoon_park_empty\n-\smountains\n-\sstadium\n-\sstadium_dry\n\nDeprecated\sbackgrounds:\n\n-\sdawn_cloudy_empty\n-\smorning_cloudy_empty\n-\snoon_cloudy_empty\n-\snoon_cloudy_mountains\n-\snoon_stormy_empty\n-\snoon_sunny_empty\n-\snoon_sunny_garden\n-\stwilight_cloudy_empty\n

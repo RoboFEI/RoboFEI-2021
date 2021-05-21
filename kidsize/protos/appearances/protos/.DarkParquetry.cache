@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 8b8de4d3853c827ec52bda04ec3bdb8b
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,textureTransform,IBLStrength
+tags: hidden,static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: Backward\scompatibility\swith\sthe\sdeprecated\s'DarkParquetry'\sPROTO\s(deprecated\sin\sWebots\sR2020a-rev2)\nA\sdark\sparquetry\smaterial.\n

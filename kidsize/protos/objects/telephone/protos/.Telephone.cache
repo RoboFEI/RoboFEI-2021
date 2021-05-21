@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: d2cacce18a65bffc85a181d9adb9115a
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation
+tags: 
+license:  MIT
+licenseUrl:  https://opensource.org/licenses/MIT
+documentationUrl: 
+info: A\smodel\sof\sa\stelephone,\ssourced\sfrom\sthe\sGLTF\sPBR\sreference\simplementation,\sfound\sat\shttps://github.com/KhronosGroup/glTF-WebGL-PBR.\n

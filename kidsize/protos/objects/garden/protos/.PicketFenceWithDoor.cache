@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: f690ac174c558fad933a088299e7128b
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,enableBoundingObject
+tags: 
+license:  Creative Commons Attribution 4.0 International License.
+licenseUrl:  https://creativecommons.org/licenses/by/4.0/legalcode
+documentationUrl: 
+info: A\spicket\sfence\swith\sa\sdoor\sand\soptional\sboundingObject.\n

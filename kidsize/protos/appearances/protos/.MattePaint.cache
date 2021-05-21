@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 259423a4b093fb0df293131eb55d47ee
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: baseColor,textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\smatte\spaint\smaterial.\sThe\scolor\scan\sbe\sselected\sin\sthe\s`baseColor`\sfield.\n

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: f2efbfe45dc3db425d0791ea76616abe
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sblanket\sfabric\smaterial.\n

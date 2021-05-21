@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 64a16b83f01e73b890126f1129194d4d
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,size,appearance,borderThickness,borderHeight,speed,acceleration,timer
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\scustomizable\sconveyor\sbelt\smoving\sat\sa\sconstant\sspeed.\n

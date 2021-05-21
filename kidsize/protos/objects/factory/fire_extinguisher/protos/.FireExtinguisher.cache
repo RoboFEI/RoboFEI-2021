@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 021490c489d0708f5d348c5a136ecfa5
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,enablePhysics
+tags: static
+license:  Attribution-NonCommercial 4.0 International (original model by 3DHaupt)
+licenseUrl:  https://creativecommons.org/licenses/by-nc/4.0
+documentationUrl: 
+info: A\ssimple\sfire\sextinguisher\swith\soptional\sphysics.\n

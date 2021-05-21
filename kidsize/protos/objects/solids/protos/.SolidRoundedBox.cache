@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: faf7b7fbe98846089ca0d1dd67167dde
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,size,borderRadius,subdivision,contactMaterial,appearance,physics,enableBoundingObject
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\sbox\sobject\swith\srounded\scorners\sand\sedges\simplemented\sat\sthe\sSolid-node\slevel.\nThe\sbox\shas\ssimilar\sproperties\sas\sthe\sVRML\sBox\snode\sin\sterm\sof\saxis\sand\sfields.\n

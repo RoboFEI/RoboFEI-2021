@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 8151a698f0d77aba3b3c427ea5b8ec48
+needsRobotAncestor: 0
+baseType: Transform
+slotType: 
+parameters: translation,rotation,treesFiles,shape,density,type,randomSeed,groundTexture,withSnow,maxHeight,minHeight,maxRadius,minRadius
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Efficient\sand\scustomizable\sforest.\nTree\stypes\sare:\n-\s'oak\stree'\n-\s'crab\sapple\stree'\n-\s'cherry\stree'\n-\s'birch\stree'\n-\s'palm\stree'\n-\s'spruce'\n-\s'white\spine'\n-\s'hackberry\stree'\n-\s'hazel\stree'\n\nThe\s'random'\stype\schoose\srandomly\sa\stree\stype\seach\stime\sthe\snode\sis\sregenerated.\nThe\sshape\sof\sthe\sforest\scan\seither\sbe\sdefined\susing\sthe\s'shape'\sand\s'density'\sfields\sor\sthe\scoordinate\sof\seach\stree\scan\sbe\sdefined\sin\sexternal\sfiles\s(\sX,Y,Z\sper\stree,\sone\stree\sper\sline).\nThe\spath\sto\sthose\sfiles\scan\seither\sbe\sabsolute,\srelative\sto\sthe\sproto,\srelative\sto\sthe\sworld\sor\srelative\sto\sthe\sproject.\nThis\smodel\swas\ssponsored\sby\sthe\sCTI\sproject\sRO2IVSim\s(http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles).\n

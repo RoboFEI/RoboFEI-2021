@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: cfe712c155038815c75a1f6394da849e
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: type,textureTransform,IBLStrength
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\srubber\smaterial.\nThe\stype\sof\srubber\scan\sbe\sset\susing\sthe\s`type`\sfield.\n

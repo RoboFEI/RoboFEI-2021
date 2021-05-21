@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: f5ec2b94dbc223c5f0857e27456e90a8
+needsRobotAncestor: 0
+baseType: IndexedFaceSet
+slotType: 
+parameters: size,doubleSided
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: Single/double\ssided\sand\sadjustable\srectangle\sshape.\n

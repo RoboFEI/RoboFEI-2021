@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 5068dc67e76b30a06cdb2e2313448c82
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,legAppearance,seatAppearance,enablePhysics
+tags: 
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\srotating\soffice\schair\swith\scustomizable\sappearance.\n

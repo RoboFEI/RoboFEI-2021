@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 295f105386e102bbd12c31def4c72344
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: type,colorOverride,textureTransform,IBLStrength
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sworn\spaint\slayer\son\sa\smetal\ssurface.\nThe\stype\sof\smetal\ssurface\scan\sbe\sset\susing\sthe\s`type`\sfield.\n

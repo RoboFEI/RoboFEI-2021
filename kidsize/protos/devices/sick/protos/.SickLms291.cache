@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 005f7d992ead87bd75acd5de06a4b1d7
+needsRobotAncestor: 1
+baseType: Lidar
+slotType: 
+parameters: translation,rotation,name,noise,resolution
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: https://www.cyberbotics.com/doc/guide/lidar-sensors#sick-lms-291
+info: Model\sof\sSick\sLMS291\s(Lidar\sdevice).\n'resolution'\sshould\sbe\stypically\s180,\s360\sor\s720\sin\sorder\sto\shave\sa\sprecision\sof\srespectively\s1°,\s0.5°\sand\s0.25°\n

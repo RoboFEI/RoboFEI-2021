@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 9a57cb71338a8eb8f42e7b48962565e9
+needsRobotAncestor: 1
+baseType: Lidar
+slotType: 
+parameters: translation,rotation,name,noise,resolution,enablePhysics
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: https://www.cyberbotics.com/doc/guide/lidar-sensors#hokuyo-utm-30lx
+info: Model\sof\sHokuyo\sUTM-30LX\s(lidar\sdevice).\nspecs:\n-\sfield\sof\sview:\s270\s[deg]\n-\srange\s:\s0.1\sto\s30\s[m]\n-\sresolution\s:\s1080\s*\s0.25\s[deg]\n-\sdimension\s:\s0.06\sx\s0.087\sx\s0.06\s[m]\n-\sweight\s:\s0.37\s[kg]\n

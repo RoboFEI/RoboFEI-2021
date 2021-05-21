@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 41dd4e73956914cfc3f8baa8f398045d
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,enablePhysics
+tags: static
+license:  Creative Commons Attribution 4.0 International License.
+licenseUrl:  https://creativecommons.org/licenses/by/4.0/legalcode
+documentationUrl: 
+info: A\swatering\scan\swith\soptional\sphysics.\n

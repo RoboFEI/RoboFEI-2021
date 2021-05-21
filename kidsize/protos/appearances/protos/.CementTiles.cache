@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 47b8e1f9388aa8fdc58b6b601b96ceb0
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\scement\stiles\smaterial.\n

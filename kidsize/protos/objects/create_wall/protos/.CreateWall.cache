@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: d86d65002d12bd34daba1ac263f23c35
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,range,aperture,controller,controllerArgs,supervisor,name
+tags: 
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Virtual\swalls\sare\san\saccessory\sof\sthe\sIRobot\sCreate\sallowing\sto\sinform\sthe\srobot\sabout\sareas\stypically\sfor\srestricted\saccess\sto\sa\sroom.\n

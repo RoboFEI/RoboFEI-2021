@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 8784864951ca1dd8ec31f0bc75138861
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,enableBoundingObject
+tags: static
+license:  Creative Commons Attribution 4.0 International License.
+licenseUrl:  https://creativecommons.org/licenses/by/4.0/legalcode
+documentationUrl: 
+info: A\smodern\ssuburban\shouse\swith\soptional\sboundingObject.\n

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 40fdc5fa971e85031e60e177dcd0ca5e
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\spine\swood\smaterial\scovered\swith\sa\slayer\sof\svarnish.\sThe\scolor\scan\sbe\soverridden\susing\sthe\s`colorOverride`\sfield.\n

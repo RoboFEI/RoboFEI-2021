@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: d79e53940b301b4866f4473c81c4abd5
+needsRobotAncestor: 1
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,cameraWidth,cameraHeight,cameraFieldOfView,cameraNoise,rangeFinderNoise,rangeFinderMaxRange,leftCamera,rightCamera,metaCamera,metaRangeFinder,enablePhysics
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: https://www.cyberbotics.com/doc/guide/camera-sensors#multisense-s21
+info: Model\sof\sMultiSense\sS21\sstereoscopic\scamera.\n

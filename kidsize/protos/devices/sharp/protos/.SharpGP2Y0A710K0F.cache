@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 40940cc5497bb0639ed344bb02e21669
+needsRobotAncestor: 1
+baseType: DistanceSensor
+slotType: 
+parameters: translation,rotation,name,model
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0.
+documentationUrl: https://www.cyberbotics.com/doc/guide/distancesensor-sensors
+info: This\sis\sa\sPROTO\sfile\sfor\sWebots\sof\sthe\sinfrared\ssensor\sGP2Y0A710K0F\sfrom\sSharp.\nEffective\srange:\s100\sto\s550\scm,\sdatasheet:\shttps://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a710k_e.pdf\nBased\son\sthe\slookupTable,\spower\sfitting\smethod\safter\sthe\shighest\svoltage\spoint.\ny[V]\s=\sf(x[m])\s\s=>\sy\s=\s1.962*x^(-0.5214)+0.4926\ny[m]\s=\sf(x[V])\s\s=>\sy\s=\s20.24*x^(-4.76)+0.6632\n

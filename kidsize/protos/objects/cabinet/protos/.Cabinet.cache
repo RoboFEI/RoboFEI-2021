@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 6b810a2c42e1978b5e6f590386dd0649
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,depth,innerThickness,outerThickness,rowsHeights,columnsWidths,layout,handle,primaryAppearance,secondaryAppearance
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\scustomizable\scabinet\scontaining\selements\s(shelves,\sdynamic\sdoors,\sand\sdrawers).\nThe\sinternal\scabinet\slayout\sis\sa\sgrid\sin\swhich\sthe\selements\scan\sbe\sinserted.\nThe\sgrid\sdimension\s(and\sso\sthe\scabinet\ssize)\sis\sdefined\sby\sthe\s'rowsHeights'\sand\sthe\s'columnsWidths'\sfields.\nThe\s`layout`\sfield\sis\sdefining\sthe\slocation\sand\sthe\sdimension\sof\sthe\selements\sinto\sthe\sgrid\slayout,\saccording\sto\sthe\sfollowing\ssyntax:\n-\s`layout`:\slist("[RightSidedDoor|LeftSiderDoor|Drawer|Shelf]\s(x,\sy,\scolumn\sspan,\srow\sspan[,\smass])"\n\nThe\scoordinate\sorigin\s(1,1)\sof\sthe\sgrid\slayout\sis\sat\sthe\sbottom\sleft\scorner.\n

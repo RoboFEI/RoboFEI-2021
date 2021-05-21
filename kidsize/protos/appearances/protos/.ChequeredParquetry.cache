@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: e3febc8736127059b056972a6c388a40
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: textureTransform,IBLStrength
+tags: hidden,static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: Backward\scompatibility\swith\sthe\sdeprecated\s'ChequeredParquetry'\sPROTO\s(deprecated\sin\sWebots\sR2020a-rev2)\nA\swooden\smaterial\sin\sa\schequered\spattern\scovered\swith\sa\slayer\sof\svarnish.\sUseful\swith\sthe\s`Floor`\sPROTO.\n

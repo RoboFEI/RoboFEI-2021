@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 8ffd2c6c1b4ce08d7fc2b894e2354c59
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\ssolar\spanel\scell\smaterial.\n

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: d05c1316f80d8b82d029a5bbd634441e
+needsRobotAncestor: 0
+baseType: Group
+slotType: 
+parameters: size,textureUrl,textureFiltering,textureTransform,textureMapping,faceColor,frontFace,backFace,leftFace,rightFace,topFace,bottomFace
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Box\swith\scustomizable\stexture\smapping\son\sselected\sfaces.\nIf\sthe\sboolean\svalue\sassociated\swith\sa\sface\s(`frontFace`,\s`leftFace`,\setc.)\sis\sFALSE,\sthen\sthe\suniform\scolor\sspecified\sin\s`faceColor`\sfield\swill\sbe\sapplied\sinstead\sof\sthe\stexture.\nThis\sis\san\sextension\sof\sthe\sTexturedBox\sgeometry\sPROTO.\nAvailable\stexture\smappings:\n-\s`cube`\smapping:\ssee\stexture\sat\sprojects/samples/geometries/worlds/textures/cube_mapping.jpg\n-\s`compact`\scube\smapping:\ssee\stexture\sat\sprojects/samples/geometries/worlds/textures/compact_mapping.jpg\n-\s`flat`\smapping:\sprojecting\sthe\stexture\son\sthe\sfront\sface.\n-\s`metric`\smapping:\ssimilar\sto\sdefault\smapping\sbut\sthe\stexture\sis\snot\sdeformed\sto\smatch\seach\sface\ssize.\n-\s`default`\smapping:\ssame\stexture\son\sall\sthe\sfaces.\n\nA\sdemo\sof\sthese\smappings\sis\savailable\sin\sprojects/samples/geometries/worlds/textured_boxes.wbt.\n

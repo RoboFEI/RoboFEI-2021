@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 49fbfda20834a39de414cefa52f7408e
+needsRobotAncestor: 1
+baseType: Lidar
+slotType: 
+parameters: translation,rotation,name,version,enablePhysics
+tags: 
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: https://www.cyberbotics.com/doc/guide/lidar-sensors#velodyne-puck
+info: Velodyne\sPuck\ssensor\smodel\sbased\son\sthe\sLidar\sPROTO.\nThis\smodel\scan\ssimulate\sthe\sfollowing\sversions:\n-\s'Puck'\n-\s'Puck\sLITE'\n-\s'Puck\sHi-Res'\n

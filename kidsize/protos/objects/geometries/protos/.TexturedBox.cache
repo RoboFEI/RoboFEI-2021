@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: df84107fd0e6239ca4e4394aa59849af
+needsRobotAncestor: 0
+baseType: IndexedFaceSet
+slotType: 
+parameters: size,mapping,front,back,left,right,top,bottom
+tags: 
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Box\swith\scustomizable\stexture\smapping.\nAvailable\stexture\smappings:\n-\s`cube`\smapping:\ssee\stexture\sat\sprojects/samples/geometries/worlds/textures/cube_mapping.jpg\n-\s`compact`\scube\smapping:\ssee\stexture\sat\sprojects/samples/geometries/worlds/textures/compact_mapping.jpg\n-\s`flat`\smapping:\sprojecting\sthe\stexture\son\sthe\sfront\sface\n-\s`metric`\smapping:\ssimilar\sto\sdefault\smapping\sbut\sthe\stexture\sis\snot\sdeformed\sto\smatch\seach\sface\ssize\n-\s`default`\smapping:\ssame\stexture\son\sall\sthe\sfaces\n-\s`none`:\sno\stexture\smapping\nIf\sa\sboolean\sfield\s(front,\sback,\sleft,\sright,\stop,\sbottom)\sis\sFALSE,\sthen\sthe\scorresponding\sface\sis\snot\sdrawn.\nA\sdemo\sof\sthese\smappings\sis\savailable\sin\sprojects/samples/geometries/worlds/textured_boxes.wbt.\n

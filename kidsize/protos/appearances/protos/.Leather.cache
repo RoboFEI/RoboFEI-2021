@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: c74c5dc4f7982381f056dcba6ad21b77
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,tone,type,textureTransform,IBLStrength
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sleather\smaterial.\sThe\scolor\scan\sbe\soverridden\susing\sthe\s`colorOverride`\sfield.\n

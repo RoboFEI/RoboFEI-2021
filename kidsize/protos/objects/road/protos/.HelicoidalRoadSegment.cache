@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: a18a3bab858eb3b6a6ad832d69a6d389
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,id,startJunction,endJunction,width,numberOfLanes,numberOfForwardLanes,speedLimit,lines,roadBorderHeight,roadBorderWidth,rightBorder,leftBorder,bottom,height,radius,heigthStep,startLine,endLine,subdivision,appearance,pavementAppearance,bottomTexture,locked,roadBoundingObject,rightBorderBoundingObject,leftBorderBoundingObject,castShadows,contactMaterial,dashedLine
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\ssimple\sand\sconfigurable\shelicoidal\sroad\sshowing\show\sto\suse\sthe\sRoad\sPROTO\sin\sorder\sto\screate\s3D\sroads.\nThis\smodel\swas\ssponsored\sby\sthe\sCTI\sproject\sRO2IVSim\s(http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles).\n

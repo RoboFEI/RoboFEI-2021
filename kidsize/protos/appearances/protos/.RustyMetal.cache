@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: dcb2d58a752ad0fa47539861779d8059
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: rustLevel,colorOverride,textureTransform,IBLStrength
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: An\sold\sbattered\ssteel\smaterial.\nThe\scolor\scan\sbe\soverridden\susing\sthe\s`colorOverride`\sfield\sand\sthe\samount\sof\srust\scan\sbe\sset\susing\sthe\s`rustLevel`\sfield.\n
