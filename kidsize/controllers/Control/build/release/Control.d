@@ -10,8 +10,7 @@ build/release/Control.o: Control.cpp minIni.h minGlue.h \
  Framework/include/../Framework_Dynamixel/include/dynamixel_sdk/group_bulk_write.h \
  Framework/include/../Framework_Dynamixel/include/dynamixel_sdk/group_sync_read.h \
  Framework/include/../Framework_Dynamixel/include/dynamixel_sdk/group_sync_write.h \
- Linux/include/../../../../../../include/controller/cpp/webots/Robot.hpp \
- Linux/include/LinuxMotionTimer.h blackboard.h ActionMove.hpp \
- Framework/include/Action.h Framework/include/Walking.h \
  /home/kvalim/Documents/dev/webots/include/controller/cpp/webots/Robot.hpp \
- GaitMove.hpp ReadConfig.hpp
+ Linux/include/LinuxMotionTimer.h blackboard.h ActionMove.hpp \
+ Framework/include/Action.h Framework/include/Walking.h GaitMove.hpp \
+ ReadConfig.hpp

@@ -1,6 +1,6 @@
 PROTO Prometheus [
-  field SFVec3f    translation              0 0 0.448729 
-  field SFRotation rotation                 0 0 -1 3.14159  
+  field SFVec3f    translation              -4 0 0.45 
+  field SFRotation rotation                 0 0 1 1.5708  
   field SFString   name                     "blue player 1"  
   field MFString   controllerArgs           []      
   field SFFloat    XH540W270-torque14-8V    12.9
@@ -9,14 +9,14 @@ PROTO Prometheus [
   field SFFloat    XH540W270-friction14-8V  1.49
   field SFFloat    backlash                 0.01 #0.004363323
   field SFFloat    resolution               0.0015
-  field SFString   controller               ""  
+  field SFString   controller               "Control"  
   field SFBool     selfCollision            TRUE      
   field SFInt32    cameraWidth              800    
   field SFInt32    cameraHeight             600     
   
   #protected
   hiddenField SFString _model       "Prometheus"
-  hiddenField SFString _description "FEI-ROBO' Prometheus modeled by FEI-ROBO" 
+  hiddenField SFString _description "RoboFEI's Prometheus modeled by team RoboFEI" 
 
   #jersey
   hiddenField SFColor  redJersey    0.443137 0 0

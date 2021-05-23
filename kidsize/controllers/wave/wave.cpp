@@ -70,16 +70,16 @@ int main(int argc, char **argv) {
   ArmUpperR->setPosition(2.434);
   ArmLowerR->setPosition(0.00);
   PelvYL->setPosition(0.00);
-  PelvL->setPosition(0.00);
+  PelvL->setPosition(-0.630);
   LegUpperL->setPosition(0.00);
   LegLowerL->setPosition(0.00);
-  AnkleL->setPosition(0.00);
+  AnkleL->setPosition(0.453);
   FootL->setPosition(0.00);
   PelvYR->setPosition(0.00);
-  PelvR->setPosition(0.00);
+  PelvR->setPosition(0.623);
   LegUpperR->setPosition(0.00);
   LegLowerR->setPosition(0.00);
-  AnkleR->setPosition(0.00);
+  AnkleR->setPosition(0.453);
   FootR->setPosition(0.00);
   
   }

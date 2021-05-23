@@ -8,7 +8,6 @@
 #ifndef _MOTION_MANGER_H_
 #define _MOTION_MANGER_H_
 
-
 #include <list>
 #include <fstream>
 #include <iostream>
@@ -17,8 +16,7 @@
 #include "minIni.h"
 #include "AngleEstimator.h"
 #include "../Framework_Dynamixel/include/dynamixel_sdk/dynamixel_sdk.h"
-//#include <webots/Robot.hpp>
-#include <../../../../../../include/controller/cpp/webots/Robot.hpp>
+#include <webots/Robot.hpp>
 
 
 #define OFFSET_SECTION "Offset"

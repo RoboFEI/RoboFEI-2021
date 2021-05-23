@@ -38,7 +38,6 @@ Arquivo fonte contendo o programa que controla os servos do corpo do robô
 #include "ActionMove.hpp"
 #include "GaitMove.hpp"
 #include <webots/Robot.hpp>
-//#include <../../../../../../include/controller/cpp/webots/Robot.hpp>
 
 #ifdef MX28_1024
 #define MOTION_FILE_PATH    "./Data/motion_1024.bin"
@@ -122,7 +121,7 @@ int main(int argc, char **argv)
 
 
     //Configurando para prioridade maxima para executar este processo-------
-    sprintf(string1,"echo password | sudo -S chrt -p -r 99 %d", getpid());
+    sprintf(string1,"echo K!q19944 | sudo -S chrt -p -r 99 %d", getpid());
     system(string1); //prioridade
     
     printf( "\n===== ROBOFEI-HT Control Process Robot Teen =====\n\n");
@@ -254,7 +253,7 @@ int main(int argc, char **argv)
 //    } 
     //===============================
 
-    int key = 98; // greeting 104   // walk_foward_slow 107 
+    int key = 107; // greeting 104   // walk_foward_slow 107 
     //***********************************************************************************************
     if (true) //verifica se foi chamado o argumento de controle pelo teclado
     {

@@ -335,40 +335,16 @@ void ActionMove::goodBye(bool &stop_gait)
 }
 
 
-
-
-
-
-
 //========================================================================
 //O robo bate palmas com as maos para cima--------------------------------
-//void ActionMove::greetings(bool &stop_gait)
-//{
-    //write_int(mem, CONTROL_ACTION, 19);
-    //write_int(mem, CONTROL_MOVING, 1);
-    //std::cout<<" | \e[38;5;45mGreetings\e[0m"<<std::endl;
-    //move_action(24, 0, stop_gait); //24
-  //  write_int(mem, CONTROL_MOVING, 0);
-//}
-
-
-//========================================================================
-//            WALKING TEST--------------------------------
 void ActionMove::greetings(bool &stop_gait)
 {
     write_int(mem, CONTROL_ACTION, 19);
     write_int(mem, CONTROL_MOVING, 1);
-    //std::cout<<" | \e[38;5;45m9\e[0m"<<std::endl;
-
-    //move_action(1, 0, stop_gait);
-    move_action(9, 0, stop_gait);
-    
-    std::cout<<" | \e[38;5;45mWalking\e[0m"<<std::endl;
-    //move_action(70, 0, stop_gait);
+    std::cout<<" | \e[38;5;45mGreetings\e[0m"<<std::endl;
+    move_action(24, 0, stop_gait); 
     write_int(mem, CONTROL_MOVING, 0);
 }
-
-
 
 //========================================================================
 //Levantar de frente------------------------------------------------------
