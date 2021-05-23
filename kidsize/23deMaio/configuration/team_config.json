@@ -4,7 +4,7 @@
         "1": {
             "robotModelName": "Prometheus",
             "dockerTag": "latest",
-            "dockerCmd": "",
+            "dockerCmd": "./Control",
             "halfTimeStartingPose": {
                 "translation": [-4, 0, 0.45],
                 "rotation": [0, 0, 1, 1.57]
@@ -25,7 +25,7 @@
         "2": {
             "robotModelName": "Prometheus",
             "dockerTag": "latest",
-            "dockerCmd": "",
+            "dockerCmd": "./Control",
             "halfTimeStartingPose": {
                 "translation": [-2.2, 0, 0.45],
                 "rotation": [0, 0, 1, 1.57]
@@ -46,7 +46,7 @@
         "3": {
             "robotModelName": "Prometheus",
             "dockerTag": "latest",
-            "dockerCmd": "",
+            "dockerCmd": "./Control",
             "halfTimeStartingPose": {
                 "translation": [-0.8, -0.5, 0.45],
                 "rotation": [0, 0, 1, 1.57]
@@ -67,7 +67,7 @@
         "4": {
             "robotModelName": "Prometheus",
             "dockerTag": "latest",
-            "dockerCmd": "",
+            "dockerCmd": "./Control",
             "halfTimeStartingPose": {
                 "translation": [-0.8, 0.5, 0.45],
                 "rotation": [0, 0, 1, 1.57]

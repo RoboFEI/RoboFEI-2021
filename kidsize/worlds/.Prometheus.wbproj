@@ -9,5 +9,4 @@ renderingMode: PLAIN
 orthographicViewHeight: 1
 textFiles: 1 "controllers/Control/Control.cpp" "controllers/wave/wave.cpp"
 globalOptionalRendering: CoordinateSystem::JointAxes::LightSensorRays
-centerOfMass: blue player 1
 consoles: Console:All:All

@@ -9,7 +9,7 @@ PROTO Prometheus [
   field SFFloat    XH540W270-friction14-8V  1.49
   field SFFloat    backlash                 0.01 #0.004363323
   field SFFloat    resolution               0.0015
-  field SFString   controller               "Control"  
+  field SFString   controller               "<extern>"  
   field SFBool     selfCollision            TRUE      
   field SFInt32    cameraWidth              800    
   field SFInt32    cameraHeight             600     
