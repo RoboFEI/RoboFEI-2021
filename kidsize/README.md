@@ -21,16 +21,7 @@
 
 # How to run the controler
 
-<<<<<<< HEAD
-1. Open path/to/controllers/Control/Control.cpp.
-2. On line 124, change "password" to your user Linux's password.
-3. To compile the controler in Webots, first remove the intermediate build files (comb icon), then build the project (gear icon).
-4. Run the simulation.
-=======
-1. Open path/to/RoboFEI-2021/controllers/Control/Control.cpp.
-2. On line 124, change "password" to your user Linux's password.
-3. To compile the controler in Webots, first remove the intermediate build files (comb icon), then build the project (gear icon).
-4. Run the simulation.
-5. Open another terminal and go to path/to/RoboFEI-2021/controllers/Control
-6. Execute "./Control"
->>>>>>> 8f63239fc40132ef96db70496aedc0b970bac68e
+        1. Open path/to/controllers/Control/Control.cpp.
+        2. On line 124, change "password" to your user Linux's password.
+        3. To compile the controler in Webots, first remove the intermediate build files (comb icon), then build the project (gear icon).
+        4. Run the simulation.
