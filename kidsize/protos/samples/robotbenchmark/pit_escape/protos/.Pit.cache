@@ -1,11 +1,11 @@
 Webots Proto Cache File version 1.5
-protoFileHash: 9bbaf76ee85adcd291075031f0196328
+protoFileHash: 5df2bca6b0651d55b77255def4d3057d
 needsRobotAncestor: 0
 baseType: Solid
 slotType: 
 parameters: translation,rotation,size,xDimension,zDimension,appearance,randomSeed,perlinNOctaves,noiseAmplitude,pitRadius
-tags: 
+tags: nonDeterministic
 license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
 licenseUrl:  https://cyberbotics.com/webots_assets_license
 documentationUrl: 
-info: Randomly\sgenerated\suneven\sterrain\sbased\son\sPerlin\snoise.\n
+info: Randomly\sgenerated\suneven\sterrain\sbased\son\sPerlin\snoise.

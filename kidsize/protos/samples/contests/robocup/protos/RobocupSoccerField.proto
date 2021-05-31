@@ -1,14 +1,13 @@
 #VRML_SIM R2021b utf8
 # license: Apache License 2.0
 # license url: http://www.apache.org/licenses/LICENSE-2.0
-# tags: static
 # Official soccer field for the Robocup Humanoid League 2021.
 
 PROTO RobocupSoccerField [
   field SFVec3f                     translation 0 0 0
   field SFRotation                  rotation    0 1 0 0
   field SFString                    name        "soccer_field"
-  field SFString{"adult", "kid"}    size        "kid"
+  field SFString{"adult", "kid"}    size        "adult"
   field SFBool                      turfPhysics TRUE
 ]
 {
@@ -171,8 +170,8 @@ PROTO RobocupSoccerField [
       end
     end
 
-    circle_add_pts(H / 2) -- Inner radius of central circle
-    circle_add_pts(H / 2 + LINE_WIDTH) -- Outer radius of central circle
+    circle_add_pts(H / 2 - LINE_WIDTH) -- Inner radius of central circle
+    circle_add_pts(H / 2) -- Outer radius of central circle
 
     --Add the triangles for the line of the central circle
     Npts = table.maxn(pts)
@@ -256,6 +255,7 @@ PROTO RobocupSoccerField [
   Solid {
     translation IS translation
     rotation IS rotation
+    locked TRUE
     children [
       %{ if fields.turfPhysics.value then }%
       DEF BLADES Solid {
@@ -292,8 +292,10 @@ PROTO RobocupSoccerField [
         }
       }
       DEF LINES Shape {
-        appearance WhiteGrass {
+        appearance Grass {
           colorOverride 1 1 1
+          type "artificial_white"
+          IBLStrength 1.5
           textureTransform TextureTransform {
             scale %{= 2 * A }% %{= 2 * A }%
           }

@@ -1,5 +1,5 @@
 Webots Proto Cache File version 1.5
-protoFileHash: 39e2ee15cb00b6c0778bcf61631cc2f6
+protoFileHash: f40cff81a730568b4b5739359c7cd2b9
 needsRobotAncestor: 0
 baseType: Robot
 slotType: 
@@ -8,4 +8,4 @@ tags:
 license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
 licenseUrl:  https://cyberbotics.com/webots_assets_license
 documentationUrl: 
-info: Supervisor\sof\sthe\smaze\srunner\sbenchmark.\n
+info: Supervisor\sof\sthe\smaze\srunner\sbenchmark.

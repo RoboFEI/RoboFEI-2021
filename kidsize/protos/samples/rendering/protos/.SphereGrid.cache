@@ -1,5 +1,5 @@
 Webots Proto Cache File version 1.5
-protoFileHash: 06f0e196bc83e56fd1dc3a6807cd3eb2
+protoFileHash: c332f1d6680b456a309e90d6c04a6b0e
 needsRobotAncestor: 0
 baseType: Solid
 slotType: 
@@ -8,4 +8,4 @@ tags:
 license: 
 licenseUrl: 
 documentationUrl: 
-info: A\sgrid\sof\sspheres\sfor\stesting\smaterial\sproperties.\n
+info: A\sgrid\sof\sspheres\sfor\stesting\smaterial\sproperties.

@@ -1,5 +1,5 @@
 Webots Proto Cache File version 1.5
-protoFileHash: 957d8920299cbce695200c28fa035626
+protoFileHash: b3f14cb59d55c37755f44e6bec067e85
 needsRobotAncestor: 1
 baseType: Robot
 slotType: 
@@ -8,4 +8,4 @@ tags:
 license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
 licenseUrl:  https://cyberbotics.com/webots_assets_license
 documentationUrl: 
-info: The\sPioneer\s3-DX\srobot\s(Adept\sMobileRobots)\sis\san\sall-purpose\sbase,\sused\sfor\sresearch\sand\sapplications\sinvolving\smapping,\steleoperation,\slocalization,\smonitoring,\sreconnaissance\sand\sother\sbehaviors.\n
+info: The\sPioneer\s3-DX\srobot\s(Adept\sMobileRobots)\sis\san\sall-purpose\sbase,\sused\sfor\sresearch\sand\sapplications\sinvolving\smapping,\steleoperation,\slocalization,\smonitoring,\sreconnaissance\sand\sother\sbehaviors.

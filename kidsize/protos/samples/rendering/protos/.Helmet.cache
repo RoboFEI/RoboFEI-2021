@@ -1,5 +1,5 @@
 Webots Proto Cache File version 1.5
-protoFileHash: e61dc6ece6109e607595c13972e46dd1
+protoFileHash: e775a5fbe12f7896b727566e5c33eea3
 needsRobotAncestor: 0
 baseType: Solid
 slotType: 
@@ -8,4 +8,4 @@ tags:
 license:  MIT
 licenseUrl:  https://opensource.org/licenses/MIT
 documentationUrl: 
-info: A\smodel\sof\san\sadvanced\ssci-fi\shelmet,\ssourced\sfrom\sthe\sGLTF\sPBR\sreference\simplementation,\sfound\sat\shttps://github.com/KhronosGroup/glTF-WebGL-PBR.\n
+info: A\smodel\sof\san\sadvanced\ssci-fi\shelmet,\ssourced\sfrom\sthe\sGLTF\sPBR\sreference\simplementation,\sfound\sat\shttps://github.com/KhronosGroup/glTF-WebGL-PBR.
