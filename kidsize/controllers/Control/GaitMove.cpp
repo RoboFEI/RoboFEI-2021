@@ -137,9 +137,9 @@ void GaitMove::robot_stop(bool &stop_gait)
     Walking::GetInstance()->m_Joint.SetEnableBody(false);
     Action::GetInstance()->m_Joint.SetEnableBody(true);
     MotionManager::GetInstance()->SetEnable(true);
-    usleep(500000); //Aguarda 0.5 segundos para estabilizar o robo
+    usleep(500); //Aguarda 0.5 segundos para estabilizar o robo    500000
     Action::GetInstance()->Start(1); // Realiza a ação do numero contido no move_number
-    while(Action::GetInstance()->IsRunning()) usleep(8*1000);
+    while(Action::GetInstance()->IsRunning()) usleep(4*1000);
     stop_gait = 1;
     write_int(mem, CONTROL_MOVING, 0);
 }

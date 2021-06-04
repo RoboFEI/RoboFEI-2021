@@ -69,8 +69,8 @@
 null :=
 space := $(null) $(null)
 WEBOTS_HOME_PATH=$(subst $(space),\ ,$(strip $(subst \,/,$(WEBOTS_HOME))))
-INCLUDE = -I"./Linux/include" -I"./Framework/include"
-LIBRARIES = -Wno-write-strings -lpthread -lrt -lboost_filesystem#-L"./Linux/project/control/main.cpp" -L"./Linux/project/control/kbhit.cpp" -L"./Linux/project/control/ReadConfig.cpp" -L"./Linux/project/control/ActionMove.cpp" -L"./Linux/project/control/GaitMove.cpp"
+INCLUDE = -I"./Linux/include" -I"./Framework/include" -I"/usr/include/python3.8"
+LIBRARIES = -Wno-write-strings -lpthread -lrt -lboost_filesystem -ldl -lutil -lm -lpython3.8 -Xlinker -export-dynamic#-L"./Linux/project/control/main.cpp" -L"./Linux/project/control/kbhit.cpp" -L"./Linux/project/control/ReadConfig.cpp" -L"./Linux/project/control/ActionMove.cpp" -L"./Linux/project/control/GaitMove.cpp"
 CXXFLAGS=-std=c++98
 CXX_SOURCES = $(wildcard *.cpp) 
 

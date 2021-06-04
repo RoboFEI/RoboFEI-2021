@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: ed851a61b511e64007fa67f7d4654662
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,controllerArgs,XH540W270-torque14-8V,XH540W270-vel14-8V,XH540W270-damping14-8V,XH540W270-friction14-8V,backlash,resolution,controller,selfCollision,cameraWidth,cameraHeight,_model,_description,redJersey,blueJersey,red1,red2,red3,red4,blue1,blue2,blue3,blue4
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: RoboFEI'\sPrometheus.
