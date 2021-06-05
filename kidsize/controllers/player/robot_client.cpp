@@ -211,7 +211,7 @@ SensorMeasurements RobotClient::receive() {
 bool RobotClient::isOk() {
   return socket_fd != -1;
 }
-
+/*
 ActuatorRequests RobotClient::buildRequestMessage(const char *msg) {
   const char *message = msg;
   //if (message == nullptr)
@@ -229,6 +229,16 @@ ActuatorRequests RobotClient::buildRequestMessage(const char *msg) {
   //name: "Neck [head]"
   //position: 0
   //}
+  return actuator_request;
+}
+*/
+
+ActuatorRequests RobotClient::buildRequestMessage(const std::string &path) {
+  const char *message = read_file(path.c_str());
+  if (message == nullptr)
+    throw std::runtime_error("File '" + path + "' does not exist");
+  ActuatorRequests actuator_request;
+  google::protobuf::TextFormat::ParseFromString(message, &actuator_request);
   return actuator_request;
 }
 

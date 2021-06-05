@@ -110,7 +110,7 @@ void GaitMove::walk_foward_slow(bool &stop_gait, bool max_speed, bool same_movim
     write_int(mem, CONTROL_ACTION, 8);
 
     if(same_moviment == false)
-        std::cout<<" | \e[38;5;45mAndar lento para frente\e[0m"<<std::endl;
+        //std::cout<<" | \e[38;5;45mAndar lento para frente\e[0m"<<std::endl;
     if(float(read_int(mem, DECISION_ACTION_B))<walkslow->walk_foward && max_speed==false){
         move_gait(float(read_int(mem, DECISION_ACTION_B)), walkslow->sidle, walkslow->turn_angle, stop_gait, walkslow);
     }

@@ -73,6 +73,55 @@ void tchau(RobotClient client){
 
 }
 
+void walk(RobotClient client){
+  const char *move;
+  const char *phase1 = "./walk/1.txt";
+  const char *phase2 = "./walk/2.txt";
+  const char *phase3 = "./walk/3.txt";
+  const char *phase4 = "./walk/4.txt";
+  const char *phase5 = "./walk/5.txt";
+  const char *phase6 = "./walk/6.txt";
+  const char *phase7 = "./walk/7.txt";
+  const char *phase8 = "./walk/8.txt";
+
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_wave<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(50+flag_time)) move = phase1;
+    else if(time <(100+flag_time)) move = phase2;
+    else if(time <(150+flag_time)) move = phase3;
+    else if(time <(200+flag_time)) move = phase4;
+    else if(time <(250+flag_time)) move = phase5;
+    else if(time <(300+flag_time)) move = phase6;
+    else if(time <(350+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      //stop_wave++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+
+  //std::string out = google::protobuf::TextFormat::PrintToString(sensors.position_sensors(), &out);
+  //std::cout << sensors.position_sensors(1).value() << std::endl;
+  //std::string printout;
+  //google::protobuf::TextFormat::PrintToString(sensors, &printout);
+  //std::cout << time << std::endl;
+  //std::cout << motorPosition.position() << std::endl;
+  
+ 
+
+}
+
 
 int main(int argc, char *argv[]) {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -112,8 +161,8 @@ int main(int argc, char *argv[]) {
   client.connectClient();
   while (client.isOk()) {
     try {
-      tchau(client);
-      
+      //tchau(client);
+      walk(client);
       
 
       SensorMeasurements sensors = client.receive();

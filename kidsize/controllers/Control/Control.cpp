@@ -274,10 +274,24 @@ int main(int argc, char **argv)
 //        }
 //    } 
     //===============================
-    
+
+    /*//
+    MotionStatus::m_CurrentJoints.SetValue(1,1);
+    MotionStatus::m_CurrentJoints.SetValue(2,1);
+    MotionStatus::m_CurrentJoints.SetValue(3,1);
+    MotionStatus::m_CurrentJoints.SetValue(4,1);
+    MotionStatus::m_CurrentJoints.SetValue(5,1);
+    MotionStatus::m_CurrentJoints.SetValue(6,1);
+    MotionStatus::m_CurrentJoints.SetValue(7,1);
+    MotionStatus::m_CurrentJoints.SetValue(8,1);
+    MotionStatus::m_CurrentJoints.SetValue(9,1);
+    /*/
+
+
+
     int key = 107; // greeting 104   // walk_foward_slow 107 
     //***********************************************************************************************
-    if (false) //verifica se foi chamado o argumento de controle pelo teclado
+    if (true) //verifica se foi chamado o argumento de controle pelo teclado
     {
     //-------------iniciando o modulo de andar pelo teclado------------------------------------------
         buffer=0;
@@ -374,7 +388,7 @@ int main(int argc, char **argv)
                 break;
 
                 case 107: //k
-                    if(flag<=3050) 
+                    /*if(flag<=3050) 
                     {
                         gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
                         cout << flag << endl;
@@ -392,6 +406,8 @@ int main(int argc, char **argv)
                         gaitMove.robot_stop(stop_gait);
                         
                     }
+                    */
+                    gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
                     
 
                     
@@ -459,141 +475,140 @@ int main(int argc, char **argv)
 
     //***************************************************************************************
     //-------------------------Controle pela decisão-----------------------------------------
-    logInit(); // save the time when start the control process
+    //logInit(); // save the time when start the control process
     while(1)
-    {
-        gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
-        //Confere se o movimento atual e o mesmo do anterior----------
-        if(buffer==read_int(mem, DECISION_ACTION_A))
-            same_moviment = true;
-        else
-        {
-            same_moviment = false;
-            std::cout<< "\nAction " << read_int(mem, DECISION_ACTION_A); // Mostra o valor da ação
-            count_read=0;
-            //Altera o torque dos motores pelos valores do PID
+    {       
+            //Confere se o movimento atual e o mesmo do anterior----------
+            if(buffer==read_int(mem, DECISION_ACTION_A))
+                same_moviment = true;
+            else
+            {
+                same_moviment = false;
+                std::cout<< "\nAction " << read_int(mem, DECISION_ACTION_A); // Mostra o valor da ação
+                count_read=0;
+                //Altera o torque dos motores pelos valores do PID
 //                if(read_int(mem, DECISION_ACTION_A) == 0)
 //                    PidStatic(packetHandler, portHandler);
 //                else
 //                    PidMotion(packetHandler, portHandler);
-        }
-        buffer = read_int(mem, DECISION_ACTION_A);
-        //------------------------------------------------------------
-
-        if (read_int(mem, IMU_STATE)){ // Ve se esta caido
-            if(read_float(mem, IMU_ACCEL_X) > 0){  //Levanta se caido de frente
-                actionMove.standupFront(stop_gait);
             }
-            else{  //Levanta se caido de costa
-                actionMove.standupBack(stop_gait);
+            buffer = read_int(mem, DECISION_ACTION_A);
+            //------------------------------------------------------------
+
+            if (read_int(mem, IMU_STATE)){ // Ve se esta caido
+                if(read_float(mem, IMU_ACCEL_X) > 0){  //Levanta se caido de frente
+                    actionMove.standupFront(stop_gait);
+                }
+                else{  //Levanta se caido de costa
+                    actionMove.standupBack(stop_gait);
+                }
+                stop_gait = 1;
+                sleep(1);
+                flag_stop = false;
             }
-            stop_gait = 1;
-            sleep(1);
-            flag_stop = false;
-        }
 
 
-        if(read_int(mem, DECISION_ACTION_A) == 0)
-        {
-            if(flag_stop==false)
-                gaitMove.robot_stop(stop_gait);
-            flag_stop = true; //variavel que indica que o robo ja estava parado, isso evita de repetir o movimento
-        }
-        else
-            flag_stop = false;
-
-        if(read_int(mem, DECISION_ACTION_A) == 1)
-            gaitMove.walk_foward_fast(stop_gait, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 2)
-            gaitMove.turn_left(stop_gait, true, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 3)
-            gaitMove.turn_right(stop_gait, true, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 4)
-            actionMove.kick_right_strong(robot, stop_gait);
-
-        if(read_int(mem, DECISION_ACTION_A) == 5)
-            actionMove.kick_left_strong(robot, stop_gait);
-
-        if(read_int(mem, DECISION_ACTION_A) == 6)
-            gaitMove.sidle_left(stop_gait, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 7)
-            gaitMove.sidle_right(stop_gait, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 8)
-            gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 9)
-            gaitMove.turn_around_ball_left(stop_gait, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 10)
-            actionMove.goalkeeper(stop_gait);
-
-        if(read_int(mem, DECISION_ACTION_A) == 11)
-            gaitMove.Gait_in_place(stop_gait, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 12)
-            //actionMove.pass_left(&cm730, stop_gait);
-
-        if(read_int(mem, DECISION_ACTION_A) == 13)
-            //actionMove.pass_right(&cm730, stop_gait);
-
-        if(read_int(mem, DECISION_ACTION_A) == 14)
-            gaitMove.turn_around_ball_right(stop_gait, same_moviment);
-
-        if(read_int(mem, DECISION_ACTION_A) == 15)
-        {
-            if (read_int(mem, IMU_STATE))// check if robot is fall
-                actionMove.standupFront(stop_gait);
+            if(read_int(mem, DECISION_ACTION_A) == 0)
+            {
+                if(flag_stop==false)
+                    gaitMove.robot_stop(stop_gait);
+                flag_stop = true; //variavel que indica que o robo ja estava parado, isso evita de repetir o movimento
+            }
             else
-                std::cout<<" | \e[1;31mRobô não está caido ou IMU está desligada\e[0m"<<std::endl;
-        }
-        if(read_int(mem, DECISION_ACTION_A) == 16)
-        {
-            if (read_int(mem, IMU_STATE))// check if robot is fall
-                actionMove.standupBack(stop_gait);
-            else
-                std::cout<<" | \e[1;31mRobô não está caido ou IMU está desligada\e[0m"<<std::endl;
-        }
-        if(read_int(mem, DECISION_ACTION_A) == 17)
-        {
-            gaitMove.walk_backward_fast(stop_gait, same_moviment);
-        }
-        if(read_int(mem, DECISION_ACTION_A) == 18)
-        {
-            gaitMove.walk_backward_slow(stop_gait, true, same_moviment);
-        }
+                flag_stop = false;
 
-        if(read_int(mem, DECISION_ACTION_A) == 19)
-            actionMove.greetings(stop_gait);
+            if(read_int(mem, DECISION_ACTION_A) == 1)
+                gaitMove.walk_foward_fast(stop_gait, same_moviment);
 
-        if(read_int(mem, DECISION_ACTION_A) == 20)
-            actionMove.goodBye(stop_gait);
+            if(read_int(mem, DECISION_ACTION_A) == 2)
+                gaitMove.turn_left(stop_gait, true, same_moviment);
 
-        if(read_int(mem, DECISION_ACTION_A) == 21)
-            actionMove.kick_right_weak(stop_gait); //Chute fraco com pe direito
+            if(read_int(mem, DECISION_ACTION_A) == 3)
+                gaitMove.turn_right(stop_gait, true, same_moviment);
 
-        if(read_int(mem, DECISION_ACTION_A) == 22)
-            actionMove.kick_left_weak(stop_gait); //Chute fraco com pe esquerdo
+            if(read_int(mem, DECISION_ACTION_A) == 4)
+                actionMove.kick_right_strong(robot, stop_gait);
 
-        // Escreve na variável de telemetria.
-        write_int(mem, CONTROL_WORKING, 1);
+            if(read_int(mem, DECISION_ACTION_A) == 5)
+                actionMove.kick_left_strong(robot, stop_gait);
 
-        //Imprime na tela o tempo que esta ocioso por nao receber uma nova instrucao da decisao-------
-        count_read++;
-        std::cout << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
-        fflush (stdout);
-        usleep(step_time*1000); //Operando na frequencia de 1/step_time Hertz
-        //--------------------------------------------------------------------------------------------
+            if(read_int(mem, DECISION_ACTION_A) == 6)
+                gaitMove.sidle_left(stop_gait, same_moviment);
+
+            if(read_int(mem, DECISION_ACTION_A) == 7)
+                gaitMove.sidle_right(stop_gait, same_moviment);
+
+            if(read_int(mem, DECISION_ACTION_A) == 8)
+                gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
+
+            if(read_int(mem, DECISION_ACTION_A) == 9)
+                gaitMove.turn_around_ball_left(stop_gait, same_moviment);
+
+            if(read_int(mem, DECISION_ACTION_A) == 10)
+                actionMove.goalkeeper(stop_gait);
+
+            if(read_int(mem, DECISION_ACTION_A) == 11)
+                gaitMove.Gait_in_place(stop_gait, same_moviment);
+
+            if(read_int(mem, DECISION_ACTION_A) == 12)
+                //actionMove.pass_left(&cm730, stop_gait);
+
+            if(read_int(mem, DECISION_ACTION_A) == 13)
+                //actionMove.pass_right(&cm730, stop_gait);
+
+            if(read_int(mem, DECISION_ACTION_A) == 14)
+                gaitMove.turn_around_ball_right(stop_gait, same_moviment);
+
+            if(read_int(mem, DECISION_ACTION_A) == 15)
+            {
+                if (read_int(mem, IMU_STATE))// check if robot is fall
+                    actionMove.standupFront(stop_gait);
+                else
+                    std::cout<<" | \e[1;31mRobô não está caido ou IMU está desligada\e[0m"<<std::endl;
+            }
+            if(read_int(mem, DECISION_ACTION_A) == 16)
+            {
+                if (read_int(mem, IMU_STATE))// check if robot is fall
+                    actionMove.standupBack(stop_gait);
+                else
+                    std::cout<<" | \e[1;31mRobô não está caido ou IMU está desligada\e[0m"<<std::endl;
+            }
+            if(read_int(mem, DECISION_ACTION_A) == 17)
+            {
+                gaitMove.walk_backward_fast(stop_gait, same_moviment);
+            }
+            if(read_int(mem, DECISION_ACTION_A) == 18)
+            {
+                gaitMove.walk_backward_slow(stop_gait, true, same_moviment);
+            }
+
+            if(read_int(mem, DECISION_ACTION_A) == 19)
+                actionMove.greetings(stop_gait);
+
+            if(read_int(mem, DECISION_ACTION_A) == 20)
+                actionMove.goodBye(stop_gait);
+
+            if(read_int(mem, DECISION_ACTION_A) == 21)
+                actionMove.kick_right_weak(stop_gait); //Chute fraco com pe direito
+
+            if(read_int(mem, DECISION_ACTION_A) == 22)
+                actionMove.kick_left_weak(stop_gait); //Chute fraco com pe esquerdo
+
+            // Escreve na variável de telemetria.
+            write_int(mem, CONTROL_WORKING, 1);
+
+            //Imprime na tela o tempo que esta ocioso por nao receber uma nova instrucao da decisao-------
+            count_read++;
+            std::cout << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+            fflush (stdout);
+            usleep(step_time*1000); //Operando na frequencia de 1/step_time Hertz
+            //--------------------------------------------------------------------------------------------
     }
     //--------------------------------------------------------------------------------------------------
     //==================================================================
 
-    //std::cout<<"Press some key to end!\n"<<std::endl;
-    //getchar();
+    std::cout<<"Press some key to end!\n"<<std::endl;
+    getchar();
 
     //LinuxActionScript::ScriptStart("script.asc");
     //while(LinuxActionScript::m_is_running == 1) sleep(10);

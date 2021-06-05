@@ -34,7 +34,8 @@ public:
    */
   bool isOk();
 
-  static ActuatorRequests buildRequestMessage(const char *msg);
+  //static ActuatorRequests buildRequestMessage(const char *msg);
+  static ActuatorRequests buildRequestMessage(const std::string &path);
 
 private:
   /**

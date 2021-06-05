@@ -454,7 +454,7 @@ void MotionManager::Process()
   uint8_t wGoalPosition = 100;
   uint8_t wDistance = 200;
   
-
+  
 	for(uint8_t id=JointData::ID_MIN; id<=JointData::ID_MAX; id++)
 	{
 		if(MotionStatus::m_CurrentJoints.GetEnable(id) == true)
@@ -518,6 +518,105 @@ void MotionManager::Process()
 
 		if(DEBUG_PRINT == true)
 		fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
+    if(id==JointData::ID_MAX)
+    { 
+      
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightShoulderRoll [shoulder]\"" << std::endl;
+      std::cout << "  position: " << param[1]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftShoulderRoll [shoulder]\"" << std::endl;
+      std::cout << "  position: " << param[2]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightArmPitch [arm]\"" << std::endl;
+      std::cout << "  position: " << param[3]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftArmPitch [arm]\"" << std::endl;
+      std::cout << "  position: " << param[4]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+      
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightElbowPitch [arm]\"" << std::endl;
+      std::cout << "  position: " << param[5]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftElbowPitch [arm]\"" << std::endl;
+      std::cout << "  position: " << param[6]*-0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightHipRoll [hip]\"" << std::endl;
+      std::cout << "  position: " << param[7]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftHipRoll [hip]\"" << std::endl;
+      std::cout << "  position: " << param[8]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightHipRoll [hip]\"" << std::endl;
+      std::cout << "  position: " << param[9]*-0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftHipYaw [hip]\"" << std::endl;
+      std::cout << "  position: " << param[10]*-0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightLegPitch [leg]\"" << std::endl;
+      std::cout << "  position: " << param[11]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftLegPitch [leg]\"" << std::endl;
+      std::cout << "  position: " << param[12]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightKnee [leg]\"" << std::endl;
+      std::cout << "  position: " << param[13]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftKnee [leg]\"" << std::endl;
+      std::cout << "  position: " << param[14]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightFootPitch [foot]\"" << std::endl;
+      std::cout << "  position: " << param[15]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftFootPitch [foot]\"" << std::endl;
+      std::cout << "  position: " << param[16]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"RightFootRoll [foot]\"" << std::endl;
+      std::cout << "  position: " << param[17]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "motor_positions {" << std::endl;
+      std::cout << "  name: " << "\"LeftFootRoll [foot]\"" << std::endl;
+      std::cout << "  position: " << param[18]*0.001533203125 << std::endl;
+      std::cout << "}" << std::endl;
+
+      std::cout << "=======================================" << std::endl;
+      std::cout << "=======================================" << std::endl;
+      std::cout << "=======================================" << std::endl;
+    }
+    
 	}
 
 	if(joint_num > 0){
@@ -548,9 +647,12 @@ void MotionManager::Process()
             FootR->setPosition(param[17]*0.001533203125);
             FootL->setPosition(param[18]*0.001533203125);
             robot->step(timeStep);
+              
+
             //printf( "\n===== %d ============================\n\n", robot->step(timeStep));
     
     }
+
 /*
     std::cout << "goal 7: " << int (wGoalPosition) << '\n';
 
@@ -571,6 +673,7 @@ void MotionManager::Process()
 */
 
 	}
+  
 
 
     m_IsRunning = false;
@@ -580,6 +683,7 @@ void MotionManager::Process()
 //        m_torqueAdaptionCounter = TORQUE_ADAPTION_CYCLES;
 //        adaptTorqueToVoltage();
 //    }
+
 }
 
 void MotionManager::SetEnable(bool enable)

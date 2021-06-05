@@ -56,6 +56,9 @@
         "thread": "cpp",
         "cfenv": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "strstream": "cpp",
+        "condition_variable": "cpp",
+        "mutex": "cpp"
     }
 }
