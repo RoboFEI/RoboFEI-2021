@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 873f56040ac44abbc25865a44fbb9191
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,textureTransform,IBLStrength
+tags: hidden,static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: Backward\scompatibility\swith\sthe\sdeprecated\s'SquarePavement'\sPROTO\s(deprecated\sin\sWebots\sR2020a-rev2)\nA\ssquare\spavement\smaterial.\nThe\scolor\scan\sbe\soverridden\susing\sthe\s`colorOverride`\sfield.\n

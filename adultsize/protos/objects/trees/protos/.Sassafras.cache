@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: ae16b4f788d6f6f9700d7b9b0c3fde01
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,enableBoundingObject
+tags: static
+license:  Creative Commons Attribution 4.0 International License.
+licenseUrl:  https://creativecommons.org/licenses/by/4.0/legalcode
+documentationUrl: 
+info: A\ssassafras\stree\swith\soptional\sboundingObject.\n

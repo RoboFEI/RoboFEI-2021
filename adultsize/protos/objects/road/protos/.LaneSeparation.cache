@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: c464aedde0b30a6f0bc40dd953f44749
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,id,connectedRoadIDs,width,length,numberOfLanes,numberOfleavingLanes,speedLimit,newLaneLeft,lines,roadBorderHeight,roadBorderWidth,rightBorder,leftBorder,centralBorder,rightBarrier,leftBarrier,bottom,startLine,endLine,appearance,pavementAppearance,bottomTexture,locked,roadBoundingObject,rightBorderBoundingObject,leftBorderBoundingObject,centralBorderBoundingObject,rightBarrierBoundingObject,leftBarrierBoundingObject,castShadows,contactMaterial,dashedLine
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: A\ssimple\ssegment\sof\sroad\sallowing\sto\sdivide\sa\sroad\sinto\stwo\ssmaller\sones\s(or\sto\sassemble\stwo\sroads\sinto\sa\sbigger\sone).\nThe\snumber\sof\slanes\sof\seach\sof\sthe\stwo\ssmaller\sroads\sis\sindependently\sconfigurable\sas\swell\sas\sa\slot\sof\sothers\sparameters\sof\sa\sregular\sroad.\nThis\smodel\swas\ssponsored\sby\sthe\sCTI\sproject\sRO2IVSim\s(http://transport.epfl.ch/simulator-for-mobile-robots-and-intelligent-vehicles).\n

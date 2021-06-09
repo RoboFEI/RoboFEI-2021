@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 718df109e4d2c2afe594599c9d50f9e0
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,size
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sblack\sand\swhite\sFIFA\ssoccer\sball\swith\scustomizable\ssize.\nThis\sobject\sis\sphysics-enabled\sso\sit\swill\sroll\sor\sbounce\swhen\shit.\n

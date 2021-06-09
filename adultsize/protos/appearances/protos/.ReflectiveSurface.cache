@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: c63f52069b2f94794e126967092cca8b
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: metalness,emissiveColor,emissiveIntensity,baseColorMap,useBaseColorMap,textureTransform,IBLStrength
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sreflective\ssurface\smaterial.\n

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 2e85b77f15d92ca84c36f4d6bfbf57ee
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: type,colorOverride,textureTransform,IBLStrength
+tags: static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sparquetry\smaterial.\nThe\stype\sof\sparquetry\scan\sbe\sset\susing\sthe\s`type`\sfield.\nThe\scolor\scan\sbe\soverridden\susing\sthe\s`colorOverride`\sfield.\n

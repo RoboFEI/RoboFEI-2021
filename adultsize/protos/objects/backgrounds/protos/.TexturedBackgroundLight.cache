@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: c7bc4618f3194ab174dbf1ab65b7168b
+needsRobotAncestor: 0
+baseType: DirectionalLight
+slotType: 
+parameters: texture,luminosity,castShadows
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Light\sdesigned\sto\smatch\sthe\sskyboxes\sin\sthe\sTexturedBackground\sPROTO.\n\nSupported\svalues\sfor\sthe\s`texture`\sfield:\n\n-\sdusk\n-\sempty_office\n-\sentrance_hall\n-\sfactory\n-\smars\n-\snoon_building_overcast\n-\snoon_cloudy_countryside\n-\snoon_park_empty\n-\smountains\n-\sstadium\n-\sstadium_dry\n\nDeprecated\sbackgrounds:\n\n-\sdawn_cloudy_empty\n-\smorning_cloudy_empty\n-\snoon_cloudy_empty\n-\snoon_cloudy_mountains\n-\snoon_stormy_empty\n-\snoon_sunny_empty\n-\snoon_sunny_garden\n-\stwilight_cloudy_empty\n

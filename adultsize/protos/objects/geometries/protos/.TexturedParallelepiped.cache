@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 9e9274e2181afb814498bf89af5dba07
+needsRobotAncestor: 0
+baseType: IndexedFaceSet
+slotType: 
+parameters: size,angles,mapping,front,back,left,right,top,bottom
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Customizable\sparallelepiped.\nThe\s`size`\sand\s`angles`\sfields\sspecify\sthe\sedges\sand\sangles\sof\sthe\sparallelepiped:\n-\s`angles.x`:\sangle\sbetween\sbase\sand\sside\sedges\sof\sthe\sparallelogram\sface\n-\s`angles.y`:\sangle\sin\sy\sdirection\sbetween\sfront\sand\sback\sfaces\sof\sthe\sprism\n-\s`angles.z`:\sangle\sin\sx\sdirection\sbetween\sfront\sand\sback\sfaces\sof\sthe\sprism\nAvailable\stexture\smappings:\n-\s`cube`\smapping:\ssee\stexture\sat\sprojects/samples/geometries/worlds/textures/cube_mapping.jpg\n-\s`compact`\scube\smapping:\ssee\stexture\sat\sprojects/samples/geometries/worlds/textures/compact_mapping.jpg\n-\s`flat`\smapping:\sprojecting\sthe\stexture\son\sthe\sfront\sface\n-\s`metric`\smapping:\ssimilar\sto\sdefault\smapping\sbut\sthe\stexture\sis\snot\sdeformed\sto\smatch\seach\sface\ssize\n-\s`default`\smapping:\ssame\stexture\son\sall\sthe\sfaces\n-\s`none`\sno\stexture\smapping\nIf\sa\sboolean\sfield\s(front,\sback,\sleft,\sright,\stop,\sbottom)\sis\sFALSE,\sthen\sthe\scorresponding\sface\sis\snot\sdrawn.\nA\sdemo\sof\sthese\smappings\sis\savailable\sin\sprojects/samples/geometries/worlds/textured_boxes.wbt.\n

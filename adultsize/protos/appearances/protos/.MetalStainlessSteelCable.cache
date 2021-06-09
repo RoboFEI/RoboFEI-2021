@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 8913cdcec58fee6ed07050acd3834b0d
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sstainless\ssteel\scable\sappearance.\n

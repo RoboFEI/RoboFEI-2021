@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: a094f49e5c0d45c1ff760d92322002f0
+needsRobotAncestor: 0
+baseType: Transform
+slotType: 
+parameters: translation,rotation,range,aperture,diffuseColor,transparency,subdivision
+tags: static,hidden
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Simple\sshape\sdisplaying\sthe\sdetection\sarea\sof\sa\sdistance\ssensor\swith\s2\srays\n

@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 3d0027799f21ff7ad3c75df5348b57d0
+needsRobotAncestor: 0
+baseType: Robot
+slotType: 
+parameters: window,controllerArgs
+tags: hidden
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Supervisor\snode\smanaging\sthe\svisual\stracking\sbenchmark.\n

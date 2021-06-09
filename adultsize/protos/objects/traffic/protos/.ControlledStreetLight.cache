@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 0e8eeaaabc1a89055aa570936f3f88dc
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,controller,supervisor,beamWidth,color,cutOffAngle,direction,radius,castShadows
+tags: static
+license:  Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz).
+licenseUrl:  https://creativecommons.org/licenses/by/3.0/legalcode
+documentationUrl: 
+info: Simple\smodel\sof\sa\scontrolled\sstreet\slight\sincluding\sa\scustomizable\sSpotLight.\n

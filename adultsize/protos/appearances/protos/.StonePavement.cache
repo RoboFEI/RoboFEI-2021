@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 523be856038877bf73fcc030ee9f21a6
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,type,textureTransform,IBLStrength
+tags: hidden,static
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: Backward\scompatibility\swith\sthe\sdeprecated\s'StonePavement'\sPROTO\s(deprecated\sin\sWebots\sR2020a-rev2)\nA\sstone\spavement\smaterial.\n

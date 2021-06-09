@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: b2c3448f253ca39bb1d973ba8d9dcb8b
+needsRobotAncestor: 0
+baseType: Solid
+slotType: 
+parameters: translation,rotation,name,run,rise,width,newelHeight,balusterHeight,balusterRadius,nBalusters,appearance,contactMaterial
+tags: static
+license:  Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+licenseUrl:  https://cyberbotics.com/webots_assets_license
+documentationUrl: 
+info: Default\sstairs\shandrail.\n

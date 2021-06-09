@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: ccf702c3851a1575a499191e8759eeac
+needsRobotAncestor: 0
+baseType: PBRAppearance
+slotType: 
+parameters: colorOverride,textureTransform,IBLStrength
+tags: 
+license:  Apache License 2.0
+licenseUrl:  http://www.apache.org/licenses/LICENSE-2.0
+documentationUrl: 
+info: A\sporcelain\schevron\stiles\smaterial.\n
