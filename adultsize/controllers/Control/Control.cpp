@@ -289,7 +289,7 @@ int main(int argc, char **argv)
 
 
 
-    int key = 107; // greeting 104   // walk_foward_slow 107 
+    int key = 116; // greeting 104   // walk_foward_slow 107 
     //***********************************************************************************************
     if (true) //verifica se foi chamado o argumento de controle pelo teclado
     {

@@ -1,4 +1,4 @@
-PROTO Atlas [
+PROTO Cronus [
   field SFVec3f    translation              -4.91 -9.27839e-07 1.04
   field SFRotation rotation                 0 0 1 -1.5707953071795862 
   field SFString   name                     "blue player 1"  
@@ -15,8 +15,8 @@ PROTO Atlas [
   field SFInt32    cameraHeight             600     
   
   #protected
-  hiddenField SFString _model       "Atlas"
-  hiddenField SFString _description "RoboFEI's Atlas modeled by team RoboFEI" 
+  hiddenField SFString _model       "Cronus"
+  hiddenField SFString _description "RoboFEI's Cronus modeled by team RoboFEI" 
 
   #jersey
   hiddenField SFColor  redJersey    0.443137 0 0

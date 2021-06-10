@@ -13,8 +13,8 @@ WorldInfo {
   physicsDisableAngularThreshold 0.1
 }
 Viewpoint {
-  orientation -0.8224888820274826 -0.32895097219999064 -0.4640078628965925 4.860547637202601
-  position -1.6563145633360399 -3.184652268552553 2.239994426019083
+  orientation -0.7559471431334522 -0.3892008203431295 -0.5263711981412043 4.734624252208042
+  position 2.835690396927172 0.13996308184177342 1.7234464206226843
 }
 TexturedBackground {
 }
@@ -27,7 +27,7 @@ RobocupSoccerBall {
   translation -0.00485177 0.0363389 0.08
   size 3
 }
-Atlas {
+Cronus {
   controller "Control"
 }
 DEF Dummie Robot {
@@ -75,8 +75,8 @@ DEF Dummie Robot {
             }
           ]
           endPoint Solid {
-            translation -0.044772599999999996 0.0081983 -1.38
-            rotation 0.9700073114491734 -0.0913831201981199 0.22524418100808385 0.00024593726227488264
+            translation -0.044772599999999996 0.008198300000000002 -1.3799999999999994
+            rotation 0.9700073115032648 -0.09138312020321572 0.2252441807730728 0.0002459372586634802
             children [
               Transform {
                 translation 0.0399 -0.014 0.125
@@ -102,8 +102,8 @@ DEF Dummie Robot {
                       }
                     ]
                     endPoint Solid {
-                      translation -3.8968645321102446e-05 0.00011826255956093323 2.3467863232706776e-06
-                      rotation -0.8311374227656317 0.00019952706678533108 -0.556067032530659 0.0006814662216984217
+                      translation -3.896864532115796e-05 0.0001182625595610165 2.346786323492722e-06
+                      rotation -0.831137422765651 0.00019952695213315503 -0.5560670325306717 0.0006814662210467544
                       children [
                         Group {
                           children [
@@ -156,7 +156,7 @@ DEF Dummie Robot {
                             }
                           ]
                           endPoint Solid {
-                            translation 1.339206523454095e-14 -2.3175905639050143e-15 2.375877272697835e-14
+                            translation 1.3530843112619095e-14 -2.2863655413374318e-15 2.298161660974074e-14
                             rotation 1 0 0 0
                             children [
                               HingeJointWithBacklash {
@@ -179,7 +179,7 @@ DEF Dummie Robot {
                                   }
                                 ]
                                 endPoint Solid {
-                                  translation 4.1494585545365226e-15 -1.2663481374630692e-15 4.1522341120980855e-14
+                                  translation 4.232725281383409e-15 -1.2420620087993939e-15 4.107825191113079e-14
                                   rotation 1 0 0 0
                                   children [
                                     DEF PernaInferiorD Transform {
@@ -229,7 +229,7 @@ DEF Dummie Robot {
                                         }
                                       ]
                                       endPoint Solid {
-                                        translation 3.8719027983802334e-15 -1.915134717478395e-15 6.128431095930864e-14
+                                        translation 3.927413949611491e-15 -1.897787482718627e-15 6.106226635438361e-14
                                         rotation 1 0 0 0
                                         children [
                                           HingeJointWithBacklash {
@@ -253,7 +253,7 @@ DEF Dummie Robot {
                                               }
                                             ]
                                             endPoint Solid {
-                                              translation 1.1102230246251565e-16 1.942890293094024e-16 4.996003610813204e-16
+                                              translation 8.326672684688674e-17 2.498001805406602e-16 6.106226635438361e-16
                                               children [
                                                 Group {
                                                   children [
@@ -549,8 +549,8 @@ DEF Dummie Robot {
             }
           ]
           endPoint Solid {
-            translation 0.0412274 0.00870067 -1.39
-            rotation 0.9700073114491734 -0.0913831201981199 0.22524418100808385 0.00024593726227488264
+            translation 0.041227400000000025 0.00870067 -1.3899999999999995
+            rotation 0.9700073114453927 -0.09138312019776366 0.2252441810245106 0.00024593726046918143
             children [
               Transform {
                 translation 0.0399 -0.014 0.133
@@ -576,8 +576,8 @@ DEF Dummie Robot {
                       }
                     ]
                     endPoint Solid {
-                      translation -3.8968645321102446e-05 0.00011826255956093323 2.3467863232706776e-06
-                      rotation -0.8311374227656317 0.00019952706678533108 -0.556067032530659 0.0006814662216984217
+                      translation -3.896864532109551e-05 0.00011826255956096099 2.3467863233817e-06
+                      rotation -0.8311374227656562 0.0001995269213215497 -0.5560670325306751 0.0006814662210467544
                       children [
                         Group {
                           children [
@@ -630,7 +630,7 @@ DEF Dummie Robot {
                             }
                           ]
                           endPoint Solid {
-                            translation 1.339206523454095e-14 -2.3175905639050143e-15 2.375877272697835e-14
+                            translation 1.341982081015658e-14 -2.3245294578089215e-15 2.3869795029440866e-14
                             rotation 1 0 0 0
                             children [
                               HingeJointWithBacklash {
@@ -653,7 +653,7 @@ DEF Dummie Robot {
                                   }
                                 ]
                                 endPoint Solid {
-                                  translation 4.1494585545365226e-15 -1.2663481374630692e-15 4.1522341120980855e-14
+                                  translation 4.1494585545365226e-15 -1.2698175844150228e-15 4.163336342344337e-14
                                   rotation 1 0 0 0
                                   children [
                                     DEF PernaInferiorE Transform {
@@ -703,7 +703,7 @@ DEF Dummie Robot {
                                         }
                                       ]
                                       endPoint Solid {
-                                        translation 3.8719027983802334e-15 -1.915134717478395e-15 6.128431095930864e-14
+                                        translation 3.885780586188048e-15 -1.9186041644303486e-15 6.122879980807738e-14
                                         rotation 1 0 0 0
                                         children [
                                           HingeJointWithBacklash {
@@ -727,7 +727,7 @@ DEF Dummie Robot {
                                               }
                                             ]
                                             endPoint Solid {
-                                              translation 1.1796119636642288e-16 1.942890293094024e-16 4.996003610813204e-16
+                                              translation 9.71445146547012e-17 1.942890293094024e-16 3.3306690738754696e-16
                                               children [
                                                 Group {
                                                   children [
@@ -1024,8 +1024,8 @@ DEF Dummie Robot {
             }
           ]
           endPoint Solid {
-            translation -0.234305 -0.003748689999999999 -0.003999950000000002
-            rotation 0.00472756791022846 0.17574392231425243 -0.9844245648455022 0.01833530717957999
+            translation -0.234305 -0.0037486900000000024 -0.003999949999999933
+            rotation 0.004727567909909492 0.17574392231425268 -0.9844245648455034 0.01833530717960421
             children [
               HingeJointWithBacklash {
                 jointParameters HingeJointParameters {
@@ -1048,7 +1048,7 @@ DEF Dummie Robot {
                   }
                 ]
                 endPoint Solid {
-                  translation -1.2670420268534599e-14 0.0019999999999997277 -9.880984919163893e-15
+                  translation -1.2670420268534599e-14 0.0019999999999997208 -9.867107131356079e-15
                   children [
                     HingeJointWithBacklash {
                       jointParameters HingeJointParameters {
@@ -1062,7 +1062,7 @@ DEF Dummie Robot {
                           maxVelocity 3.87
                           minPosition -2.83
                           maxPosition 2.83
-                          maxTorque 25
+                          maxTorque 12.9
                         }
                         PositionSensor {
                           name "RightElbowPitchS [arm]"
@@ -1070,7 +1070,7 @@ DEF Dummie Robot {
                         }
                       ]
                       endPoint Solid {
-                        translation -0.010199999999977213 -1.141448047192739e-15 -6.022959908591474e-15
+                        translation -0.010199999999977241 -1.1483869410966463e-15 -6.050715484207103e-15
                         rotation 1 0 0 0
                         children [
                           Solid {
@@ -1293,8 +1293,8 @@ DEF Dummie Robot {
             }
           ]
           endPoint Solid {
-            translation -0.0050000000000000044 -0.004 -0.0050000000000000044
-            rotation -0.00013971575300079865 -0.9873127967867187 0.15878734767196034 0.00035289625768412556
+            translation -0.004999999999999727 -0.004000000000000021 -0.0049999999999998795
+            rotation -0.0001397154073040273 -0.9873127967867662 0.15878734767196798 0.00035289625516729973
             children [
               HingeJointWithBacklash {
                 jointParameters HingeJointParameters {
@@ -1317,7 +1317,7 @@ DEF Dummie Robot {
                   }
                 ]
                 endPoint Solid {
-                  translation 0.010000000000000009 0 -9.478529072737274e-15
+                  translation 0.009999999999999953 -6.938893903907228e-18 -9.506284648352903e-15
                   children [
                     HingeJointWithBacklash {
                       jointParameters HingeJointParameters {
@@ -1331,7 +1331,7 @@ DEF Dummie Robot {
                           maxVelocity 3.87
                           minPosition -2.83
                           maxPosition 2.83
-                          maxTorque 25
+                          maxTorque 12.9
                         }
                         PositionSensor {
                           name "LeftElbowPitchS [arm]"
@@ -1339,7 +1339,7 @@ DEF Dummie Robot {
                         }
                       ]
                       endPoint Solid {
-                        translation -0.010199999999977227 -1.141448047192739e-15 -6.022959908591474e-15
+                        translation -0.010199999999977005 -1.1587952819525071e-15 -6.106226635438361e-15
                         rotation 1 0 0 0
                         children [
                           Solid {
@@ -1562,8 +1562,9 @@ DEF Dummie Robot {
             }
           ]
           endPoint Solid {
-            translation -0.0233998 -0.0397012 0.091
-            rotation -0.7145344609065251 -0.09981235023432278 -0.6924434987186482 0.0001617310173590163
+            translation -0.03999890000000001 -0.029700099999999997 0.0909986
+            rotation -0.7145344609215087 -0.09981235023641584 -0.6924434987028847 0.0001617310173590163
+            scale 2 2 2
             children [
               Camera {
                 translation 0.0226 0.009 0.11
@@ -1654,7 +1655,7 @@ DEF Dummie Robot {
             }
             physics Physics {
               density -1
-              mass 0.2
+              mass 0.4
               centerOfMass [
                 0.023 0.012 0.095
               ]
