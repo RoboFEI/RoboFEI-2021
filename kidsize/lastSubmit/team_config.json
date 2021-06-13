@@ -1,0 +1,89 @@
+{
+    "name": "RoboFEI",
+    "players": {
+        "1": {
+            "proto": "Prometheus",
+            "dockerTag": "latest",
+            "dockerCmd": "./client ${IP} ${PORT}",
+            "halfTimeStartingPose": {
+                "translation": [-3.5, -3.17, 0.45],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "reentryStartingPose": {
+                "translation": [-3, -3.17, 0.45],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "shootoutStartingPose": {
+                "translation": [2.02, -0.04, 0.45],
+                "rotation": [0, 0, 1, 0]
+            },
+            "goalKeeperStartingPose": {
+                "translation": [-4.48, 0, 0.45],
+                "rotation": [0, 0, 1, 0]
+            }
+        },
+        "2": {
+            "proto": "Prometheus",
+            "dockerTag": "latest",
+            "dockerCmd": "./client ${IP} ${PORT}",
+            "halfTimeStartingPose": {
+                "translation": [-3.5, 3.17, 0.45],
+                "rotation": [0, 0, 1, -1.57]
+            },
+            "reentryStartingPose": {
+                "translation": [-3, -3.17, 0.45],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "shootoutStartingPose": {
+                "translation": [2.02, -0.04, 0.45],
+                "rotation": [0, 0, 1, 0]
+            },
+            "goalKeeperStartingPose": {
+                "translation": [-4.48, 0, 0.45],
+                "rotation": [0, 0, 1, 0]
+            }
+        },
+        "3": {
+            "proto": "Prometheus",
+            "dockerTag": "latest",
+            "dockerCmd": "./client ${IP} ${PORT}",
+            "halfTimeStartingPose": {
+                "translation": [-0.75, -3.17, 0.45],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "reentryStartingPose": {
+                "translation": [-3, -3.17, 0.45],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "shootoutStartingPose": {
+                "translation": [2.02, -0.04, 0.45],
+                "rotation": [0, 0, 1, 0]
+            },
+            "goalKeeperStartingPose": {
+                "translation": [-4.48, 0, 0.45],
+                "rotation": [0, 0, 1, 0]
+            }
+        },
+        "4": {
+            "proto": "Prometheus",
+            "dockerTag": "latest",
+            "dockerCmd": "./client ${IP} ${PORT}",
+            "halfTimeStartingPose": {
+                "translation": [-0.75, 3.17, 0.45],
+                "rotation": [0, 0, 1, -1.57]
+            },
+            "reentryStartingPose": {
+                "translation": [-3, -3.17, 0.45],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "shootoutStartingPose": {
+                "translation": [2.02, -0.04, 0.45],
+                "rotation": [0, 0, 1, 0]
+            },
+            "goalKeeperStartingPose": {
+                "translation": [-4.48, 0, 0.45],
+                "rotation": [0, 0, 1, 0]
+            }
+        }
+    }
+}

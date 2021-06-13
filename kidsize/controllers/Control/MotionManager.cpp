@@ -553,12 +553,12 @@ void MotionManager::Process()
       std::cout << "}" << std::endl;
 
       std::cout << "motor_positions {" << std::endl;
-      std::cout << "  name: " << "\"RightHipRoll [hip]\"" << std::endl;
+      std::cout << "  name: " << "\"RightHipYaw [hip]\"" << std::endl;
       std::cout << "  position: " << param[7]*0.001533203125 << std::endl;
       std::cout << "}" << std::endl;
 
       std::cout << "motor_positions {" << std::endl;
-      std::cout << "  name: " << "\"LeftHipRoll [hip]\"" << std::endl;
+      std::cout << "  name: " << "\"LeftHipYaw [hip]\"" << std::endl;
       std::cout << "  position: " << param[8]*0.001533203125 << std::endl;
       std::cout << "}" << std::endl;
 
@@ -568,7 +568,7 @@ void MotionManager::Process()
       std::cout << "}" << std::endl;
 
       std::cout << "motor_positions {" << std::endl;
-      std::cout << "  name: " << "\"LeftHipYaw [hip]\"" << std::endl;
+      std::cout << "  name: " << "\"LeftHipRoll [hip]\"" << std::endl;
       std::cout << "  position: " << param[10]*-0.001533203125 << std::endl;
       std::cout << "}" << std::endl;
 

@@ -21,6 +21,7 @@
 
 # How to run the controler
 
+0. Check if the proto's controller is Control!!
 1. Open path/to/controllers/Control/Control.cpp.
 2. On line 124, change "password" to your user Linux's password.
 3. To compile the controler in Webots, first remove the intermediate build files (comb icon), then build the project (gear icon).
