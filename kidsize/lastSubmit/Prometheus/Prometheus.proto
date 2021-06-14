@@ -2328,7 +2328,7 @@ PROTO Prometheus [
                                                         appearance Appearance {
                                                           material Material {
                                                             ambientIntensity 1
-                                                            diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                            diffuseColor 0 0 0
                                                             shininess 0.5
                                                             specularColor 0.1 0.1 0.1
                                                           }
@@ -3445,7 +3445,7 @@ PROTO Prometheus [
                                                         appearance Appearance {
                                                           material Material {
                                                             ambientIntensity 1
-                                                            diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                            diffuseColor 0 0 0
                                                             shininess 0.5
                                                             specularColor 0.1 0.1 0.1
                                                           }

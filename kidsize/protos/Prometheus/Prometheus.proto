@@ -2328,7 +2328,7 @@ PROTO Prometheus [
                                                         appearance Appearance {
                                                           material Material {
                                                             ambientIntensity 1
-                                                            diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                            diffuseColor 0 0 0
                                                             shininess 0.5
                                                             specularColor 0.1 0.1 0.1
                                                           }
@@ -2350,7 +2350,7 @@ PROTO Prometheus [
                                                         appearance Appearance {
                                                           material Material {
                                                             ambientIntensity 1
-                                                            diffuseColor 0.600000023842 0.600000023842 0.600000023842
+                                                            diffuseColor 0 0 0
                                                             shininess 0.5
                                                             specularColor 0.1 0.1 0.1
                                                           }
@@ -2407,7 +2407,7 @@ PROTO Prometheus [
                                                                       appearance DEF __21 Appearance {
                                                                         material DEF __22 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2435,7 +2435,7 @@ PROTO Prometheus [
                                                                       appearance DEF __25 Appearance {
                                                                         material DEF __26 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2463,7 +2463,7 @@ PROTO Prometheus [
                                                                       appearance DEF __29 Appearance {
                                                                         material DEF __30 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2491,7 +2491,7 @@ PROTO Prometheus [
                                                                       appearance DEF __33 Appearance {
                                                                         material DEF __34 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2519,7 +2519,7 @@ PROTO Prometheus [
                                                                       appearance DEF __37 Appearance {
                                                                         material DEF __38 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2547,7 +2547,7 @@ PROTO Prometheus [
                                                                       appearance DEF __41 Appearance {
                                                                         material DEF __42 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2575,7 +2575,7 @@ PROTO Prometheus [
                                                                       appearance DEF __45 Appearance {
                                                                         material DEF __46 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2603,7 +2603,7 @@ PROTO Prometheus [
                                                                       appearance DEF __49 Appearance {
                                                                         material DEF __50 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2631,7 +2631,7 @@ PROTO Prometheus [
                                                                       appearance DEF __53 Appearance {
                                                                         material DEF __54 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2669,7 +2669,7 @@ PROTO Prometheus [
                                                                       appearance DEF __89 Appearance {
                                                                         material DEF __90 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2697,7 +2697,7 @@ PROTO Prometheus [
                                                                       appearance DEF __93 Appearance {
                                                                         material DEF __94 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2725,7 +2725,7 @@ PROTO Prometheus [
                                                                       appearance DEF __97 Appearance {
                                                                         material DEF __98 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2753,7 +2753,7 @@ PROTO Prometheus [
                                                                       appearance DEF __101 Appearance {
                                                                         material DEF __102 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2781,7 +2781,7 @@ PROTO Prometheus [
                                                                       appearance DEF __105 Appearance {
                                                                         material DEF __106 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2809,7 +2809,7 @@ PROTO Prometheus [
                                                                       appearance DEF __109 Appearance {
                                                                         material DEF __110 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2837,7 +2837,7 @@ PROTO Prometheus [
                                                                       appearance DEF __113 Appearance {
                                                                         material DEF __114 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2865,7 +2865,7 @@ PROTO Prometheus [
                                                                       appearance DEF __117 Appearance {
                                                                         material DEF __118 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2893,7 +2893,7 @@ PROTO Prometheus [
                                                                       appearance DEF __121 Appearance {
                                                                         material DEF __122 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -2935,7 +2935,7 @@ PROTO Prometheus [
                                                               appearance DEF __234 Appearance {
                                                                 material DEF __235 Material {
                                                                   ambientIntensity 1
-                                                                  diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                  diffuseColor 0 0 0
                                                                   shininess 0
                                                                 }
                                                               }
@@ -2973,7 +2973,7 @@ PROTO Prometheus [
                                                               appearance DEF __234 Appearance {
                                                                 material DEF __235 Material {
                                                                   ambientIntensity 1
-                                                                  diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                  diffuseColor 0 0 0
                                                                   shininess 0
                                                                 }
                                                               }
@@ -3007,7 +3007,7 @@ PROTO Prometheus [
                                                   appearance Appearance {
                                                     material Material {
                                                       ambientIntensity 1
-                                                      diffuseColor 0.2 0.2 0.2
+                                                      diffuseColor 0 0 0
                                                       shininess 0.5
                                                       specularColor 0.1 0.1 0.1
                                                     }
@@ -3423,7 +3423,7 @@ PROTO Prometheus [
                                                         appearance Appearance {
                                                           material Material {
                                                             ambientIntensity 1
-                                                            diffuseColor 0.600000023842 0.600000023842 0.600000023842
+                                                            diffuseColor 0 0 0
                                                             shininess 0.5
                                                             specularColor 0.1 0.1 0.1
                                                           }
@@ -3445,7 +3445,7 @@ PROTO Prometheus [
                                                         appearance Appearance {
                                                           material Material {
                                                             ambientIntensity 1
-                                                            diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                            diffuseColor 0 0 0
                                                             shininess 0.5
                                                             specularColor 0.1 0.1 0.1
                                                           }
@@ -3502,7 +3502,7 @@ PROTO Prometheus [
                                                                       appearance DEF __21 Appearance {
                                                                         material DEF __22 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3530,7 +3530,7 @@ PROTO Prometheus [
                                                                       appearance DEF __25 Appearance {
                                                                         material DEF __26 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3558,7 +3558,7 @@ PROTO Prometheus [
                                                                       appearance DEF __29 Appearance {
                                                                         material DEF __30 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3586,7 +3586,7 @@ PROTO Prometheus [
                                                                       appearance DEF __33 Appearance {
                                                                         material DEF __34 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3614,7 +3614,7 @@ PROTO Prometheus [
                                                                       appearance DEF __37 Appearance {
                                                                         material DEF __38 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3642,7 +3642,7 @@ PROTO Prometheus [
                                                                       appearance DEF __41 Appearance {
                                                                         material DEF __42 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3670,7 +3670,7 @@ PROTO Prometheus [
                                                                       appearance DEF __45 Appearance {
                                                                         material DEF __46 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3698,7 +3698,7 @@ PROTO Prometheus [
                                                                       appearance DEF __49 Appearance {
                                                                         material DEF __50 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3726,7 +3726,7 @@ PROTO Prometheus [
                                                                       appearance DEF __53 Appearance {
                                                                         material DEF __54 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3764,7 +3764,7 @@ PROTO Prometheus [
                                                                       appearance DEF __89 Appearance {
                                                                         material DEF __90 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3792,7 +3792,7 @@ PROTO Prometheus [
                                                                       appearance DEF __93 Appearance {
                                                                         material DEF __94 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3820,7 +3820,7 @@ PROTO Prometheus [
                                                                       appearance DEF __97 Appearance {
                                                                         material DEF __98 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3848,7 +3848,7 @@ PROTO Prometheus [
                                                                       appearance DEF __101 Appearance {
                                                                         material DEF __102 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3876,7 +3876,7 @@ PROTO Prometheus [
                                                                       appearance DEF __105 Appearance {
                                                                         material DEF __106 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3904,7 +3904,7 @@ PROTO Prometheus [
                                                                       appearance DEF __109 Appearance {
                                                                         material DEF __110 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3932,7 +3932,7 @@ PROTO Prometheus [
                                                                       appearance DEF __113 Appearance {
                                                                         material DEF __114 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3960,7 +3960,7 @@ PROTO Prometheus [
                                                                       appearance DEF __117 Appearance {
                                                                         material DEF __118 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.501960813999 0.635294079781 0.705882370472
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -3988,7 +3988,7 @@ PROTO Prometheus [
                                                                       appearance DEF __121 Appearance {
                                                                         material DEF __122 Material {
                                                                           ambientIntensity 1
-                                                                          diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                          diffuseColor 0 0 0
                                                                           shininess 0
                                                                         }
                                                                       }
@@ -4030,7 +4030,7 @@ PROTO Prometheus [
                                                               appearance DEF __234 Appearance {
                                                                 material DEF __235 Material {
                                                                   ambientIntensity 1
-                                                                  diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                  diffuseColor 0 0 0
                                                                   shininess 0
                                                                 }
                                                               }
@@ -4068,7 +4068,7 @@ PROTO Prometheus [
                                                               appearance DEF __234 Appearance {
                                                                 material DEF __235 Material {
                                                                   ambientIntensity 1
-                                                                  diffuseColor 0.596078395844 0.666666686535 0.686274528503
+                                                                  diffuseColor 0 0 0
                                                                   shininess 0
                                                                 }
                                                               }
@@ -4102,7 +4102,7 @@ PROTO Prometheus [
                                                   appearance Appearance {
                                                     material Material {
                                                       ambientIntensity 1
-                                                      diffuseColor 0.2 0.2 0.2
+                                                      diffuseColor 0 0 0
                                                       shininess 0.5
                                                       specularColor 0.1 0.1 0.1
                                                     }
