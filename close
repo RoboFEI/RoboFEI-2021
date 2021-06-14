@@ -1,0 +1,132 @@
+[33mcommit 18c38d64b04bd995797e14102a221feeb6372484[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Lars <larsbleckwedel@outlook.com>
+Date:   Mon Jun 14 16:14:15 2021 -0300
+
+    close model & dockerfile
+
+[33mcommit 61a1dd3e467c833bc3842817c98667bac000b264[m
+Author: Lars <larsbleckwedel@outlook.com>
+Date:   Sat Jun 12 02:44:53 2021 -0300
+
+    model ready
+
+[33mcommit bcbb2da3a4d0048b39ff751c5a834ea0ec843bdd[m
+Author: Lars <larsbleckwedel@outlook.com>
+Date:   Wed Jun 9 21:14:53 2021 -0300
+
+    change name
+
+[33mcommit 8c668d23d2e0f93e0fa1334bb92fa623e4f2a605[m
+Author: Lars <larsbleckwedel@outlook.com>
+Date:   Wed Jun 9 12:09:04 2021 -0300
+
+    added adult module
+
+[33mcommit 592791d3534b4800a9debb2019ea100ff556ece9[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Sat Jun 5 11:57:34 2021 -0300
+
+    player.cpp
+
+[33mcommit 618993baa57fc58dd8b778491c2e3edeec5b8140[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Sat Jun 5 02:44:05 2021 -0300
+
+    player.cpp
+
+[33mcommit 9dde7c5684e358cb80ce85ebce661c9f15659ca2[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Fri Jun 4 04:40:58 2021 -0300
+
+    Controlador mock
+
+[33mcommit 25b4a54accfbadf27fbe3ea1863a9240745a82cb[m
+Author: KValim <37526875+KValim@users.noreply.github.com>
+Date:   Mon May 31 13:04:05 2021 -0300
+
+    Update README.md
+
+[33mcommit ebf2d8811c549e5de51ca4997189de6d563dc1a4[m
+Merge: a6b3cd7 8f63239
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Mon May 31 13:02:52 2021 -0300
+
+    kick_right_weak e kick_left_weak
+
+[33mcommit a6b3cd7d8864adb9e0643ffa84c2c791ae6f37eb[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Mon May 31 13:01:23 2021 -0300
+
+    kick_right_weak e kick_left_weak
+
+[33mcommit 9e1ebc85feae9ddcffb376d56ae0665d307c47f1[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Mon May 31 12:57:39 2021 -0300
+
+    kick_right_weak e kick_left_weak
+
+[33mcommit 8f63239fc40132ef96db70496aedc0b970bac68e[m
+Author: KValim <37526875+KValim@users.noreply.github.com>
+Date:   Thu May 27 12:14:45 2021 -0300
+
+    Update README.md
+
+[33mcommit 001a4bb498076f6c3ef0a01d036930f1332e56d2[m
+Author: KValim <37526875+KValim@users.noreply.github.com>
+Date:   Thu May 27 12:14:12 2021 -0300
+
+    Update README.md
+
+[33mcommit c63f0c6d6456c229e80be0fe525b8bd89722c96e[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Thu May 27 12:13:07 2021 -0300
+
+    Correção coordenadas do proto
+
+[33mcommit 0fbca3eb936d2891818e4a5f34b9fbb65aeda2c8[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Wed May 26 14:53:22 2021 -0300
+
+    README
+
+[33mcommit 5d2283e42a283fc76448e82ce7a04f7d7e1914ba[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Wed May 26 14:50:28 2021 -0300
+
+    Atualização controlador
+
+[33mcommit 05c4bd32a30fdd3f1bfe9ac600a8bcb2c76caa6e[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Sun May 23 17:50:13 2021 -0300
+
+    Ajustes dockerfile
+
+[33mcommit 65fe5bf7772e8039f95199519988d81766206002[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Sun May 23 15:59:18 2021 -0300
+
+    23/05/21 submit
+
+[33mcommit 5b51f18423a6b3733e3fc822a5c0941af01357b7[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Fri May 21 15:46:15 2021 -0300
+
+    Correções
+
+[33mcommit d01c783a3d4aa3d1405794caf7bd90c2c7337f06[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Fri May 21 15:08:45 2021 -0300
+
+    README
+
+[33mcommit 8ef3f288bb76c3cf8ec79fa3165ac1d23db69103[m
+Author: KValim <kaiquevalim23@gmail.com>
+Date:   Fri May 21 14:59:04 2021 -0300
+
+    Initial commit
+
+[33mcommit a1fdff80c97ce31629f4c7a2b1f639a26f35fc7e[m
+Author: KValim <37526875+KValim@users.noreply.github.com>
+Date:   Fri May 21 14:49:02 2021 -0300
+
+    Initial commit
