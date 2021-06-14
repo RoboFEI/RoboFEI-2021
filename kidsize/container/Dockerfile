@@ -11,8 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # Instalação de packages
 
-RUN apt-get update -y
-RUN apt-get upgrade -y 
+RUN apt-get update -y && apt-get upgrade -y 
 RUN apt-get install -y build-essential 
 RUN apt-get install -y git 
 RUN apt-get autoremove -y
