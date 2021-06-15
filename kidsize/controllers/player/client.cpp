@@ -25,6 +25,7 @@
 
 #include "robot_client.hpp"
 
+
 static void usage(const std::string &error_msg = "") {
   if (error_msg.length() > 0)
     fprintf(stderr, "Invalid call: %s\n", error_msg.c_str());
@@ -191,8 +192,8 @@ void penalty(RobotClient client){
 
     const char *phase2 = "./kick_right_weak/2.txt"; //pe para tras
     const char *phase3 = "./kick_right_weak/3.txt"; //chuta
-    const char *phase4 = "./kick_right_weak/4.txt"; //retorna o pe
-    const char *phase5 = "./kick_right_weak/5.txt"; //
+    const char *phase4 = "./kick_right_weak/4.txt"; //chuta
+    const char *phase5 = "./kick_right_weak/5.txt"; //retorna o pe
     const char *phase6 = "./kick_right_weak/6.txt"; 
 
     if(flag == 0) flag_time = time;
@@ -277,7 +278,7 @@ int main(int argc, char *argv[]) {
       //walk(client);
       //kick_right_weak(client);
       penalty(client);
-
+      
       SensorMeasurements sensors = client.receive();
       std::string printout;
       google::protobuf::TextFormat::PrintToString(sensors, &printout);
