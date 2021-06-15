@@ -1,7 +1,7 @@
 {
     "robot_name" : "blue player 1",
     "upright" : {
-        "Head [head]":                  0.000,
+        "Neck [head]":                  0.000,
         "LeftShoulderRoll [shoulder]":  0.000,
         "LeftArmPitch [arm]":           0.000,
         "LeftElbowPitch [arm]":         0.000,
@@ -16,17 +16,17 @@
         "LeftHipRoll [hip]":            0.000,
         "LeftLegPitch [leg]":           0.000,
         "LeftKnee [leg]":               0.000,
-        "LeftFootPitch [leg]":          0.000,
+        "LeftFootPitch [foot]":          0.000,
         "LeftFootRoll [foot]":          0.000,
         "RightHipYaw [hip]":            0.000,
         "RightHipRoll [hip]":           0.000,
         "RightLegPitch [leg]":          0.000,
         "RightKnee [leg]":              0.000,
-        "RightFootPitch [leg]":         0.000,
+        "RightFootPitch [foot]":         0.000,
         "RightFootRoll [foot]":         0.000
     },
     "extension": {
-        "Head [head]":                  0.000,
+        "Neck [head]":                  0.000,
         "LeftShoulderRoll [shoulder]":  0.000,
         "LeftArmPitch [arm]":           -2.434,
         "LeftElbowPitch [arm]":         0.000,

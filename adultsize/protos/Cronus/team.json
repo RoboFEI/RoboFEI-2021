@@ -6,19 +6,19 @@
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
-                "translation": [-5.4, -4.8, 1.02],
+                "translation": [-5.4, -4.8, 1.03],
                 "rotation": [0, 0, 1, 1.57]
             },
             "reentryStartingPose": {
-                "translation": [-5, -4.8, 1.02],
+                "translation": [-5, -4.8, 1.03],
                 "rotation": [0, 0, 1, 1.57]
             },
             "shootoutStartingPose": {
-                "translation": [3, 0, 1.02],
+                "translation": [3, 0, 1.03],
                 "rotation": [0, 0, 1, 0.0]
             },
             "goalKeeperStartingPose": {
-                "translation": [-6.5, 0, 1.02],
+                "translation": [-6.5, 0, 1.03],
                 "rotation": [0, 0, 1, 0.0]
             }
         },
@@ -27,19 +27,19 @@
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
-                "translation": [-5.4, -4.8, 1.02],
+                "translation": [-5.4, 4.8, 1.03],
                 "rotation": [0, 0, 1, -1.57]
             },
             "reentryStartingPose": {
-                "translation": [-5, -4.8, 1.02],
+                "translation": [-5, 4.8, 1.03],
                 "rotation": [0, 0, 1, 1.57]
             },
             "shootoutStartingPose": {
-                "translation": [3, 0, 1.02],
+                "translation": [3, 0, 1.03],
                 "rotation": [0, 0, 1, 0.0]
             },
             "goalKeeperStartingPose": {
-                "translation": [-6.5, 0, 1.02],
+                "translation": [-6.5, 0, 1.03],
                 "rotation": [0, 0, 1, 0.0]
             }
         }

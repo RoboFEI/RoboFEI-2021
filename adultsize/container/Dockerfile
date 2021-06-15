@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 # Define as informações do container
 LABEL maintainer="RoboFEI" \
       name="cronus_controller" \
-      version="1.0"
+      version="1.1"
 
 # Define variáveis do sistema (export)
 ENV DEBIAN_FRONTEND=noninteractive \
