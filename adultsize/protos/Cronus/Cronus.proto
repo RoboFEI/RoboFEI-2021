@@ -9,7 +9,7 @@ PROTO Cronus [
   field SFFloat    XH540W270-friction14-8V  1.49
   field SFFloat    backlash                 0.01 #0.004363323
   field SFFloat    resolution               0.0015
-  field SFString   controller               "<extern>"  
+  field SFString   controller               "player"  
   field SFBool     selfCollision            TRUE      
   field SFInt32    cameraWidth              800    
   field SFInt32    cameraHeight             600     
@@ -29,7 +29,8 @@ PROTO Cronus [
   hiddenField MFString blue2       ["./textures/blue_2.png"]
   hiddenField MFString blue3       ["./textures/blue_3.png"]
   hiddenField MFString blue4       ["./textures/blue_4.png"]
-  hiddenField MFString fibra       ["./textures/rsz_fibra.jpg"]
+  hiddenField MFString fibra       ["./textures/fibra.png"]
+  hiddenField MFString aço         ["./textures/aço.png"]
 ]
 
 {
@@ -131,7 +132,7 @@ PROTO Cronus [
                                   Shape {
                                     appearance Appearance {
                                       material Material {
-                                        ambientIntensity 0.5
+                                        ambientIntensity 1
                                         diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                         shininess 0.5
                                         specularColor 0.1 0.1 0.1
@@ -210,7 +211,7 @@ PROTO Cronus [
                                           Shape {
                                             appearance Appearance {
                                               material Material {
-                                                ambientIntensity 0.5
+                                                ambientIntensity 1
                                                 diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                                 shininess 0.5
                                                 specularColor 0.1 0.1 0.1
@@ -289,7 +290,7 @@ PROTO Cronus [
                                                           Shape {
                                                             appearance Appearance {
                                                               material Material {
-                                                                ambientIntensity 0.5
+                                                                ambientIntensity 1
                                                                 diffuseColor 0 0 0
                                                                 shininess 0.5
                                                                 specularColor 0.1 0.1 0.1
@@ -356,7 +357,7 @@ PROTO Cronus [
                                                     Shape {
                                                       appearance Appearance {
                                                         material Material {
-                                                          ambientIntensity 0.5
+                                                          ambientIntensity 1
                                                           diffuseColor 0 0 0
                                                           shininess 0.5
                                                           specularColor 0.1 0.1 0.1
@@ -425,7 +426,7 @@ PROTO Cronus [
                                         Shape {
                                           appearance Appearance {
                                             material Material {
-                                              ambientIntensity 0.5
+                                              ambientIntensity 1
                                               diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                               shininess 0.5
                                               specularColor 0.1 0.1 0.1
@@ -504,7 +505,7 @@ PROTO Cronus [
                             Shape {
                               appearance Appearance {
                                 material Material {
-                                  ambientIntensity 0.5
+                                  ambientIntensity 1
                                   diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                   shininess 0.5
                                   specularColor 0.1 0.1 0.1
@@ -623,7 +624,7 @@ PROTO Cronus [
                                   Shape {
                                     appearance Appearance {
                                       material Material {
-                                        ambientIntensity 0.5
+                                        ambientIntensity 1
                                         diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                         shininess 0.5
                                         specularColor 0.1 0.1 0.1
@@ -702,7 +703,7 @@ PROTO Cronus [
                                           Shape {
                                             appearance Appearance {
                                               material Material {
-                                                ambientIntensity 0.5
+                                                ambientIntensity 1
                                                 diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                                 shininess 0.5
                                                 specularColor 0.1 0.1 0.1
@@ -781,7 +782,7 @@ PROTO Cronus [
                                                           Shape {
                                                             appearance Appearance {
                                                               material Material {
-                                                                ambientIntensity 0.5
+                                                                ambientIntensity 1
                                                                 diffuseColor 0 0 0
                                                                 shininess 0.5
                                                                 specularColor 0.1 0.1 0.1
@@ -848,7 +849,7 @@ PROTO Cronus [
                                                     Shape {
                                                       appearance Appearance {
                                                         material Material {
-                                                          ambientIntensity 0.5
+                                                          ambientIntensity 1
                                                           diffuseColor 0 0 0
                                                           shininess 0.5
                                                           specularColor 0.1 0.1 0.1
@@ -918,7 +919,7 @@ PROTO Cronus [
                                         Shape {
                                           appearance Appearance {
                                             material Material {
-                                              ambientIntensity 0.5
+                                              ambientIntensity 1
                                               diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                               shininess 0.5
                                               specularColor 0.1 0.1 0.1
@@ -997,7 +998,7 @@ PROTO Cronus [
                             Shape {
                               appearance Appearance {
                                 material Material {
-                                  ambientIntensity 0.5
+                                  ambientIntensity 1
                                   diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                   shininess 0.5
                                   specularColor 0.1 0.1 0.1
@@ -1161,7 +1162,7 @@ PROTO Cronus [
                                     Shape {
                                       appearance Appearance {
                                         material Material {
-                                          ambientIntensity 0.5
+                                          ambientIntensity 1
                                           diffuseColor 0.9 0.9 0.9
                                           shininess 0.5
                                           specularColor 0.1 0.1 0.1
@@ -1214,7 +1215,7 @@ PROTO Cronus [
                                     Shape {
                                       appearance Appearance {
                                         material Material {
-                                          ambientIntensity 0.5
+                                          ambientIntensity 1
                                           diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                           shininess 0.5
                                           specularColor 0.1 0.1 0.1
@@ -1268,7 +1269,7 @@ PROTO Cronus [
                               Shape {
                                 appearance Appearance {
                                   material Material {
-                                    ambientIntensity 0.5
+                                    ambientIntensity 1
                                     %{ if color == "red" then }%
                                         diffuseColor IS redJersey
                                     %{ elseif color == "blue" then }%
@@ -1326,7 +1327,7 @@ PROTO Cronus [
                         Shape {
                           appearance Appearance {
                             material Material {
-                              ambientIntensity 0.5
+                              ambientIntensity 1
                               %{ if color == "red" then }%
                                   diffuseColor IS redJersey
                               %{ elseif color == "blue" then }%
@@ -1478,7 +1479,7 @@ PROTO Cronus [
                                     Shape {
                                       appearance Appearance {
                                         material Material {
-                                          ambientIntensity 0.5
+                                          ambientIntensity 1
                                           diffuseColor 0.9 0.9 0.9
                                           shininess 0.5
                                           specularColor 0.1 0.1 0.1
@@ -1531,7 +1532,7 @@ PROTO Cronus [
                                     Shape {
                                       appearance Appearance {
                                         material Material {
-                                          ambientIntensity 0.5
+                                          ambientIntensity 1
                                           diffuseColor 0.596078395844 0.666666686535 0.686274528503
                                           shininess 0.5
                                           specularColor 0.1 0.1 0.1
@@ -1584,7 +1585,7 @@ PROTO Cronus [
                               Shape {
                                 appearance Appearance {
                                   material Material {
-                                    ambientIntensity 0.5
+                                    ambientIntensity 1
                                     %{ if color == "red" then }%
                                         diffuseColor IS redJersey
                                     %{ elseif color == "blue" then }%
@@ -1642,7 +1643,7 @@ PROTO Cronus [
                         Shape {
                           appearance Appearance {
                             material Material {
-                              ambientIntensity 0.5
+                              ambientIntensity 1
                               %{ if color == "red" then }%
                                   diffuseColor IS redJersey
                               %{ elseif color == "blue" then }%
@@ -1722,7 +1723,7 @@ PROTO Cronus [
                     Shape {
                       appearance Appearance {
                         material Material {
-                          ambientIntensity 0.5
+                          ambientIntensity 1
                           diffuseColor 0.2 0.2 0.2
                           shininess 0.5
                           specularColor 0.1 0.1 0.1
@@ -1760,7 +1761,7 @@ PROTO Cronus [
                             DEF neck Shape {
                               appearance Appearance {
                                 material Material {
-                                  ambientIntensity 0.5
+                                  ambientIntensity 1
                                   diffuseColor 0.9 0.9 0.9
                                   shininess 0.5
                                   specularColor 0.1 0.1 0.1
@@ -1787,10 +1788,13 @@ PROTO Cronus [
                         DEF head Shape {
                           appearance Appearance {
                             material Material {
-                              ambientIntensity 0.5
+                              ambientIntensity 1
                               diffuseColor 0.509803891182 0.713725507259 0.768627524376
                               shininess 0.5
                               specularColor 0.1 0.1 0.1
+                            }
+                            texture ImageTexture {
+                              url IS aço
                             }
                           }
                           geometry IndexedFaceSet {
@@ -1832,14 +1836,14 @@ PROTO Cronus [
           DEF Chest Group {
             children [
               DEF Chapa Transform {
-                translation 0.268 0.113 -0.68
+                translation 0.268 0.115 -0.68
                 rotation 0 0 1 3.14159
                 scale 1e-05 1e-05 1e-05
                 children [
                   Shape {
                     appearance Appearance {
                       material Material {
-                        ambientIntensity 0.5
+                        ambientIntensity 1
                         %{ if color == "red" then }%
                             diffuseColor IS redJersey
                         %{ elseif color == "blue" then }%
@@ -1903,13 +1907,13 @@ PROTO Cronus [
                 ]
               }
               DEF Chapa Transform {
-                translation -0.257 -0.121 -0.68
+                translation -0.257 -0.123 -0.68
                 scale 1e-05 1e-05 1e-05
                 children [
                   Shape {
                     appearance Appearance {
                       material Material {
-                        ambientIntensity 0.5
+                        ambientIntensity 1
                         %{ if color == "red" then }%
                             diffuseColor IS redJersey
                         %{ elseif color == "blue" then }%
@@ -1978,7 +1982,7 @@ PROTO Cronus [
                   Shape {
                     appearance Appearance {
                       material Material {
-                        ambientIntensity 0.5
+                        ambientIntensity 1
                         %{ if color == "red" then }%
                             diffuseColor IS redJersey
                         %{ elseif color == "blue" then }%
@@ -2037,7 +2041,7 @@ PROTO Cronus [
       density -1
       mass 6.483
       centerOfMass [
-        0 0.02 -0.02
+        -0.06 0.02 0.12
       ]
     }
     controller "Control"
