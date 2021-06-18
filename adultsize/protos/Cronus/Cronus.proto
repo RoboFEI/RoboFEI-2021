@@ -30,7 +30,7 @@ PROTO Cronus [
   hiddenField MFString blue3       ["./textures/blue_3.png"]
   hiddenField MFString blue4       ["./textures/blue_4.png"]
   hiddenField MFString fibra       ["./textures/fibra.png"]
-  hiddenField MFString aço         ["./textures/aço.png"]
+  hiddenField MFString aco         ["./textures/aco.png"]
 ]
 
 {
@@ -1156,7 +1156,7 @@ PROTO Cronus [
                                     ]
                                   }
                                 }
-                                DEF BraçoInferiorD Transform {
+                                DEF BracoInferiorD Transform {
                                   translation -0.17 -0.0113 -0.996
                                   children [
                                     Shape {
@@ -1262,7 +1262,7 @@ PROTO Cronus [
                       }
                       Group {
                         children [
-                          DEF BraçoSuperiorD Transform {
+                          DEF BracoSuperiorD Transform {
                             translation -0.0567 -0.0205 -0.9328
                             rotation 0 0 1 -5.307179586466759e-06
                             children [
@@ -1473,7 +1473,7 @@ PROTO Cronus [
                                     ]
                                   }
                                 }
-                                DEF BraçoInferior Transform {
+                                DEF BracoInferior Transform {
                                   translation 0.183 -0.007 -0.996
                                   children [
                                     Shape {
@@ -1579,7 +1579,7 @@ PROTO Cronus [
                       }
                       Group {
                         children [
-                          DEF BraçoSuperior Transform {
+                          DEF BracoSuperior Transform {
                             translation 0.297 -0.016 -0.933
                             children [
                               Shape {
@@ -1794,7 +1794,7 @@ PROTO Cronus [
                               specularColor 0.1 0.1 0.1
                             }
                             texture ImageTexture {
-                              url IS aço
+                              url IS aco
                             }
                           }
                           geometry IndexedFaceSet {
