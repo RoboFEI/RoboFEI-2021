@@ -1716,8 +1716,8 @@ PROTO Cronus [
               rotation -0.7145085482740419 -0.10052330592751944 -0.6923673875975984 0.00016174494096803658
               children [
                 Camera {
-                  translation 0.0455 0.0189999 0.333
-                  rotation 0 0.7071067811865476 0.7071067811865476 3.14159
+                  translation 0.0454 -0.0245 0.321
+                  rotation 3.4340012008273027e-07 -0.5000001748438122 -0.866025302838225 -3.1415853071795863
                   scale 2 2 2
                   children [
                     Shape {
@@ -1751,11 +1751,13 @@ PROTO Cronus [
                 Group {
                   children [
                     Transform {
-                      translation 0 0 0.1152
+                      translation 0 0.0722062 0.122233
+                      rotation 1 0 0 0.523598
                       scale 2 2 2
                       children [
                         DEF neck Transform {
-                          translation 0 0.0001 -0.0585
+                          translation 0 -0.061 -0.0363001
+                          rotation 1 0 0 -0.523595307179586
                           scale 0.001 0.001 0.001
                           children [
                             DEF neck Shape {
@@ -1817,10 +1819,10 @@ PROTO Cronus [
               ]
               name "head [head]"
               boundingObject Transform {
-                translation 0.0452 0.022 0.189
+                translation 0.0452 -0.006 0.189
                 children [
                   Box {
-                    size 0.112 0.101 0.38
+                    size 0.112 0.126 0.38
                   }
                 ]
               }
