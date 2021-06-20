@@ -12,8 +12,8 @@
 ****************************************************************************
 Arquivo fonte contendo o programa que controla os servos do corpo do robô
 ---------------------------------------------------------------------------*/
-#define PY_SSIZE_T_CLEAN
-#include <Python.h>
+
+//#include <RobotisOp2VisionManager.hpp>
 
 #include <unistd.h> //sleep, usleep
 #include <libgen.h> //dirname
@@ -24,8 +24,7 @@ Arquivo fonte contendo o programa que controla os servos do corpo do robô
 #include <time.h>
 #include <fcntl.h>
 #include <termios.h>
-
-
+#include <webots/Camera.hpp>
 //#include "dynamixel_sdk.h" //biblioteca SDK
 #include <vector>
 
@@ -53,12 +52,13 @@ Arquivo fonte contendo o programa que controla os servos do corpo do robô
 
 #define LIMITE_TEMP uint8_t(80)    // Define a temperatura maxima dos motores
 
+
 //------------- SDK ADD -----------------------------------
 // Control table address -> MX28.h
 
 // Protocol version
 #define PROTOCOL_VERSION                2.0                // See which protocol version is used in the Dynamixel
-
+#define TIME_STEP 64
 // Default setting
 #define BAUDRATE                        1000000
 //#define DEVICENAME                      "/dev/robot/body"      // Check which port is being used on your controller
@@ -66,6 +66,17 @@ Arquivo fonte contendo o programa que controla os servos do corpo do robô
 
 using namespace Robot;
 using namespace std;
+using namespace webots;
+//using namespace managers;
+
+
+
+  
+  
+ 
+
+  //mVisionManager = new RobotisOp2VisionManager(mCamera->getWidth(), mCamera->getHeight(), 355, 15, 60, 15, 0, 30);
+
 
 int kbhit(); //Function kbhit.cpp
 
@@ -93,28 +104,13 @@ void sighandler(int sig)
     exit(1);
 }
 
-void pythonRun(char **argv)
-{
-    wchar_t *program = Py_DecodeLocale(argv[0], NULL);
-    if (program == NULL) {
-        fprintf(stderr, "Fatal error: cannot decode argv[0]\n");
-        exit(1);
-    }
-    Py_SetProgramName(program);  /* optional but recommended */
-    Py_Initialize();
-    PyRun_SimpleString("from time import time,ctime\n"
-                       "print('Today is', ctime(time()))\n");
-    if (Py_FinalizeEx() < 0) {
-        exit(120);
-    }
-    PyMem_RawFree(program);
-}
-
 int main(int argc, char **argv)
-{   
-
-    pythonRun(argv);
-
+{
+    //Robot::getCamera("Camera");
+   //Camera *cm;
+   //cm->robot->getCamera("Camera");
+   //cm->enable(TIME_STEP);
+    //mCamera->enable(2*mTimeStep);
     change_current_dir();
     
     minIni* ini;
@@ -140,10 +136,9 @@ int main(int argc, char **argv)
     unsigned int step_time=8; // Determina a frequencia de leitura do blackboard
     //uint8_t dxl_error = 0;
 
-    int flag = 0;
 
     //Configurando para prioridade maxima para executar este processo-------
-    sprintf(string1,"echo password | sudo -S chrt -p -r 99 %d", getpid());
+    sprintf(string1,"echo 2006 | sudo -S chrt -p -r 99 %d", getpid());
     system(string1); //prioridade
     
     printf( "\n===== ROBOFEI-HT Control Process Robot Teen =====\n\n");
@@ -174,7 +169,10 @@ int main(int argc, char **argv)
 //        return 0;
 
     webots::Robot *robot = new webots::Robot();
-
+    webots::Camera *mCamera;
+    
+    //webots::CameraRecognitionObject 
+    //webots::CameraRecognitionObject;
     //LinuxCM730 linux_cm730(string1);
     //CM730 cm730(&linux_cm730);
     //if(MotionManager::GetInstance()->Initialize(&cm730) == false)
@@ -274,28 +272,32 @@ int main(int argc, char **argv)
 //        }
 //    } 
     //===============================
-
-    /*//
-    MotionStatus::m_CurrentJoints.SetValue(1,1);
-    MotionStatus::m_CurrentJoints.SetValue(2,1);
-    MotionStatus::m_CurrentJoints.SetValue(3,1);
-    MotionStatus::m_CurrentJoints.SetValue(4,1);
-    MotionStatus::m_CurrentJoints.SetValue(5,1);
-    MotionStatus::m_CurrentJoints.SetValue(6,1);
-    MotionStatus::m_CurrentJoints.SetValue(7,1);
-    MotionStatus::m_CurrentJoints.SetValue(8,1);
-    MotionStatus::m_CurrentJoints.SetValue(9,1);
-    /*/
-
-
-
-    int key = 100; // greeting 104   // walk_foward_slow 107 
+    //namespace webots {
+    //class Motor;
+    //class LED;
+    //class Camera;
+    //};
+    
+    //mCamera = getCamera("Camera");
+    //mCamera->enable(2 * mTimeStep);
+    
+    mCamera=robot->getCamera("Camera");
+    mCamera->enable(TIME_STEP);
+    //mCamera->recognitionEnable(TIME_STEP);
+    int width = mCamera->getWidth();
+    int height = mCamera->getHeight();
+    //const unsigned char *getImage() const; (ideia inicial)
+    //EX:
+    //const unsigned char *image = wb_camera_get_image(camera);
+    
+    int key = 117; // greeting 104   // walk_foward_slow 107 
+    
     //***********************************************************************************************
     if (true) //verifica se foi chamado o argumento de controle pelo teclado
     {
     //-------------iniciando o modulo de andar pelo teclado------------------------------------------
         buffer=0;
-        while(1)
+        while(1)  //while(1)
         {
             //int key = kbhit();
             
@@ -387,31 +389,8 @@ int main(int argc, char **argv)
                     gaitMove.turn_around_ball_right(stop_gait, same_moviment);
                 break;
 
-                case 107: //k
-                    /*if(flag<=3050) 
-                    {
-                        gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
-                        cout << flag << endl;
-                        flag++;
-                    }
-                    else if (flag<=3350)
-                    {
-                        gaitMove.turn_left(stop_gait, true, same_moviment);
-                        cout << flag << endl;
-                        flag++;
-                    }
-                    else 
-                    {
-                        
-                        gaitMove.robot_stop(stop_gait);
-                        
-                    }
-                    */
+                case 107: //k  //case 107
                     gaitMove.walk_foward_slow(stop_gait, true, same_moviment);
-                    
-
-                    
-                    
                 break;
 
                 case 114: //r
@@ -430,9 +409,50 @@ int main(int argc, char **argv)
                     gaitMove.robot_stop(stop_gait);
                 break;
 
-                case 117: //u
-                    actionMove.goalkeeper(stop_gait);
-                break;
+                case 117: //Goleiro
+                
+                actionMove.defense_positon(stop_gait);
+                sleep(1);
+               
+                        while(1){
+                          const unsigned char *bola = mCamera->getImage();
+                             int r1 = mCamera->imageGetRed(bola, width,   (width/2)-360, height-40);
+                             int r2= mCamera->imageGetRed(bola, width,  (width/2)-340, height-40);                       
+                             int r3 = mCamera->imageGetRed(bola, width, (width/2)-300, height-40);
+                             int r4 = mCamera->imageGetRed(bola, width, (width/2)-260, height-40);                       
+                             int r5 = mCamera->imageGetRed(bola, width, (width/2)-220, height-40);
+                             int r6 = mCamera->imageGetRed(bola, width, (width/2)-180, height-40);                       
+                             int r7 = mCamera->imageGetRed(bola, width, (width/2)-140, height-40);
+                             int r8 = mCamera->imageGetRed(bola, width, (width/2)-100, height-40);
+                             int r9 = mCamera->imageGetRed(bola, width, (width/2)-60, height-40);
+                                                
+                             
+                             int r11 = mCamera->imageGetRed(bola, width, (width/2)+380, height-40);                       
+                             int r12 = mCamera->imageGetRed(bola, width, (width/2)+340, height-40);
+                             int r13 = mCamera->imageGetRed(bola, width, (width/2)+300, height-40);                       
+                             int r14 = mCamera->imageGetRed(bola, width, (width/2)+260, height-40);
+                             int r15 = mCamera->imageGetRed(bola, width, (width/2)+220, height-40);                       
+                             int r16 = mCamera->imageGetRed(bola, width, (width/2)+180, height-40);
+                             int r17 = mCamera->imageGetRed(bola, width, (width/2)+140, height-40);                       
+                             int r18 = mCamera->imageGetRed(bola, width, (width/2)+100, height-40);
+                             //int r19 = mCamera->imageGetRed(bola, width, (width/2)+60, height-40);
+                                           
+                          if((r2 > 190 || r2 < 40) || (r3 > 190 || r3 < 40) || (r4 > 190 || r4 < 40) || (r5 > 190 || r5 < 40) || (r6 > 190 || r6 < 40) || (r7 > 190 || r7 < 40) || (r8 > 190 || r8 < 40) || (r9 > 190 ||r9 < 40)){
+                           actionMove.fall_left(stop_gait);
+                           sleep(5);
+                          }
+                          else  if((r12 > 190 || r12 < 40) || (r13 > 190 || r13 < 40) || (r14 > 190 || r14 < 40) || (r15 > 190 || r15 < 40) || (r16 > 190 || r16 < 40) || (r17 > 190 || r17 < 40) || (r18 > 190 || r18 < 40)){
+                           actionMove.fall_right(stop_gait);
+                           sleep(5);
+                          }
+                           else{
+                             actionMove.defense_positon(stop_gait);
+    
+                            }
+                           }
+                          
+                         
+                       
 
                 case 104: //h
 //                    PidMotion(packetHandler, portHandler);
@@ -475,9 +495,9 @@ int main(int argc, char **argv)
 
     //***************************************************************************************
     //-------------------------Controle pela decisão-----------------------------------------
-    //logInit(); // save the time when start the control process
+    logInit(); // save the time when start the control process
     while(1)
-    {       
+    {
             //Confere se o movimento atual e o mesmo do anterior----------
             if(buffer==read_int(mem, DECISION_ACTION_A))
                 same_moviment = true;
@@ -814,7 +834,7 @@ void logInit()
         std::fstream File;
         time_t _tm =time(NULL);
         struct tm * curtime = localtime ( &_tm );
-        File.open("Control.log", std::ios::app | std::ios::out);
+        File.open("../../Control/Control.log", std::ios::app | std::ios::out);
         if (File.good() && File.is_open())
         {
             File << "Inicializando o processo do controle "<<" --- ";
