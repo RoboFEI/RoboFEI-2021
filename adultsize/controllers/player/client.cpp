@@ -25,6 +25,7 @@
 
 #include "robot_client.hpp"
 
+
 static void usage(const std::string &error_msg = "") {
   if (error_msg.length() > 0)
     fprintf(stderr, "Invalid call: %s\n", error_msg.c_str());
@@ -32,8 +33,10 @@ static void usage(const std::string &error_msg = "") {
 }
 
 int flag = 0;
-int flag_time;
-int stop_wave = 0;
+int flag_penalty = 0;
+int flag_time = 0;
+int flag_time_penalty = 0;
+int stop_walk = 0;
 
 void tchau(RobotClient client){
   const char *move;
@@ -44,7 +47,7 @@ void tchau(RobotClient client){
   SensorMeasurements sensors = client.receive();
   int time = sensors.time();
 
-  if(stop_wave<5)
+  if(stop_walk<5)
   {
     if(flag == 0) flag_time = time;
     flag++;
@@ -62,25 +65,16 @@ void tchau(RobotClient client){
   ActuatorRequests request = RobotClient::buildRequestMessage(move);
   client.sendRequest(request);
 
-  //std::string out = google::protobuf::TextFormat::PrintToString(sensors.position_sensors(), &out);
-  //std::cout << sensors.position_sensors(1).value() << std::endl;
-  //std::string printout;
-  //google::protobuf::TextFormat::PrintToString(sensors, &printout);
-  //std::cout << time << std::endl;
-  //std::cout << motorPosition.position() << std::endl;
-  
- 
-
 }
 
 void walk(RobotClient client){
   const char *move;
-  const char *phase1 = "./walk/1.txt";
-  const char *phase2 = "./walk/2.txt";
+  const char *phase1 = "./walk/1.txt"; //"walk_ready"
+  const char *phase2 = "./walk/2.txt"; //levanta pe direito
   const char *phase3 = "./walk/3.txt";
   const char *phase4 = "./walk/4.txt";
-  const char *phase5 = "./walk/5.txt";
-  const char *phase6 = "./walk/6.txt";
+  const char *phase5 = "./walk/5.txt"; //"walk_ready'"
+  const char *phase6 = "./walk/6.txt"; //levanta pe esquerdo
   const char *phase7 = "./walk/7.txt";
   const char *phase8 = "./walk/8.txt";
 
@@ -88,7 +82,7 @@ void walk(RobotClient client){
   SensorMeasurements sensors = client.receive();
   int time = sensors.time();
 
-  if(stop_wave<5)
+  if(stop_walk<5)
   {
     if(flag == 0) flag_time = time;
     flag++;
@@ -111,17 +105,326 @@ void walk(RobotClient client){
   ActuatorRequests request = RobotClient::buildRequestMessage(move);
   client.sendRequest(request);
 
-  //std::string out = google::protobuf::TextFormat::PrintToString(sensors.position_sensors(), &out);
-  //std::cout << sensors.position_sensors(1).value() << std::endl;
-  //std::string printout;
-  //google::protobuf::TextFormat::PrintToString(sensors, &printout);
-  //std::cout << time << std::endl;
-  //std::cout << motorPosition.position() << std::endl;
-  
- 
-
 }
 
+void kick_right_weak(RobotClient client){
+  const char *move;
+  const char *phase1 = "./kick_right_weak/1.txt"; //abre bracos   //nao usando
+  const char *phase2 = "./kick_right_weak/2.txt"; //
+  const char *phase3 = "./kick_right_weak/3.txt"; //
+  const char *phase4 = "./kick_right_weak/4.txt"; //
+  const char *phase5 = "./kick_right_weak/5.txt"; //
+  const char *phase6 = "./kick_right_weak/6.txt"; //
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(flag == 0) flag_time = time;
+  flag++;
+
+  if(time<(250+flag_time)) move = phase2;
+  else if(time <(400+flag_time)) move = phase3;
+  else if(time <(550+flag_time)) move = phase4;
+  else if(time <(800+flag_time)) move = phase5;
+  else
+  {
+    move = phase6;
+    flag = 0;
+    stop_walk = 0;
+  }
+  
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void kick_left_weak(RobotClient client){
+  const char *move;
+  const char *phase1 = "./kick_left_weak/1.txt"; //abre os bracos
+  const char *phase2 = "./kick_left_weak/2.txt"; //fecha os bracos
+  const char *phase3 = "./kick_left_weak/3.txt"; //pe para tras
+  const char *phase4 = "./kick_left_weak/4.txt"; //chuta
+  const char *phase5 = "./kick_left_weak/5.txt"; //retorna o pe
+  const char *phase6 = "./kick_left_weak/6.txt"; //abre os bracos
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(500+flag_time)) move = phase1;
+    else if(time <(1000+flag_time)) move = phase2;
+    else if(time <(1500+flag_time)) move = phase3;
+    else if(time <(2000+flag_time)) move = phase4;
+    else if(time <(2500+flag_time)) move = phase5;
+    else
+    {
+      move = phase6;
+      flag = 0;
+      //stop_walk++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void turn_left(RobotClient client){
+  const char *move;
+  const char *phase1 = "./turn_left/1.txt"; //
+  const char *phase2 = "./turn_left/2.txt"; //
+  const char *phase3 = "./turn_left/3.txt"; //
+  const char *phase4 = "./turn_left/4.txt"; //
+  const char *phase5 = "./turn_left/5.txt"; //
+  const char *phase6 = "./turn_left/6.txt"; //
+  const char *phase7 = "./turn_left/7.txt"; //
+  const char *phase8 = "./turn_left/8.txt"; //
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(100+flag_time)) move = phase1;
+    else if(time <(200+flag_time)) move = phase2;
+    else if(time <(300+flag_time)) move = phase3;
+    else if(time <(400+flag_time)) move = phase4;
+    else if(time <(500+flag_time)) move = phase5;
+    else if(time <(600+flag_time)) move = phase6;
+    else if(time <(700+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      //stop_walk++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void turn_right(RobotClient client){
+  const char *move;
+  const char *phase1 = "./turn_right/1.txt"; //
+  const char *phase2 = "./turn_right/2.txt"; //
+  const char *phase3 = "./turn_right/3.txt"; //
+  const char *phase4 = "./turn_right/4.txt"; //
+  const char *phase5 = "./turn_right/5.txt"; //
+  const char *phase6 = "./turn_right/6.txt"; //
+  const char *phase7 = "./turn_right/7.txt"; //
+  const char *phase8 = "./turn_right/8.txt"; //
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(100+flag_time)) move = phase1;
+    else if(time <(200+flag_time)) move = phase2;
+    else if(time <(300+flag_time)) move = phase3;
+    else if(time <(400+flag_time)) move = phase4;
+    else if(time <(500+flag_time)) move = phase5;
+    else if(time <(600+flag_time)) move = phase6;
+    else if(time <(700+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      //stop_walk++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void penalty(RobotClient client){
+  const char *move;
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<=19)
+  {
+    const char *phase1 = "./walk/1.txt"; //"walk_ready"
+    const char *phase2 = "./walk/2.txt"; //levanta pe direito
+    const char *phase3 = "./walk/3.txt";
+    const char *phase4 = "./walk/4.txt";
+    const char *phase5 = "./walk/5.txt"; //"walk_ready'"
+    const char *phase6 = "./walk/6.txt"; //levanta pe esquerdo
+    const char *phase7 = "./walk/7.txt";
+    const char *phase8 = "./walk/8.txt";
+
+    if(flag == 0) flag_time = time;
+
+    flag++;
+
+    if(time<(50+flag_time)) move = phase1;
+    else if(time <(100+flag_time)) move = phase2;
+    else if(time <(150+flag_time)) move = phase3;
+    else if(time <(200+flag_time)) move = phase4;
+    else if(time <(250+flag_time)) move = phase5;
+    else if(time <(300+flag_time)) move = phase6;
+    //else if(time <(350+flag_time)) move = phase7;
+    else
+    {
+      move = phase7;
+      flag = 0;
+      stop_walk++;
+      std::cout << stop_walk << std::endl;
+    }
+  }
+
+  if(stop_walk > 19)
+  {
+    const char *phase1 = "./kick_left_weak/1.txt"; //abre os bracos
+    const char *phase2 = "./kick_left_weak/2.txt"; //pe para tras
+    const char *phase3 = "./kick_left_weak/3.txt"; //chuta
+    const char *phase4 = "./kick_left_weak/4.txt"; //chuta
+    const char *phase5 = "./kick_left_weak/5.txt"; //retorna o pe
+    const char *phase6 = "./kick_left_weak/6.txt"; 
+
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(250+flag_time)) move = phase2;
+    else if(time <(400+flag_time)) move = phase3;
+    else if(time <(550+flag_time)) move = phase4;
+    else if(time <(800+flag_time)) move = phase5;
+    else
+    {
+      move = phase6;
+      flag = 0;
+      stop_walk = 0;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void fall_left(RobotClient client){
+  const char *move;
+  const char *phase1 = "./fall_left/1.txt"; //
+  const char *phase2 = "./fall_left/2.txt"; //
+
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(500+flag_time)) move = phase1;
+    else
+    {
+      move = phase2;
+      //flag = 0;
+      //stop_walk++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void fall_right(RobotClient client){
+  const char *move;
+  const char *phase1 = "./fall_right/1.txt"; //
+  const char *phase2 = "./fall_right/2.txt"; //
+
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(500+flag_time)) move = phase1;
+    else
+    {
+      move = phase2;
+      //flag = 0;
+      //stop_walk++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void standup_front(RobotClient client){
+  const char *move;
+  const char *phase1 = "./standup_front/1.txt"; //
+  const char *phase2 = "./standup_front/2.txt"; //
+  const char *phase3 = "./standup_front/3.txt"; //
+  const char *phase4 = "./standup_front/4.txt"; //
+  const char *phase5 = "./standup_front/5.txt"; //
+  const char *phase6 = "./standup_front/6.txt"; //
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+
+  if(flag == 0) flag_time = time;
+  flag++;
+
+  if(time<(500+flag_time)) move = phase1;
+  else if(time <(1000+flag_time)) move = phase2;
+  else if(time <(1500+flag_time)) move = phase3;
+  else if(time <(2000+flag_time)) move = phase4;
+  else if(time <(2500+flag_time)) move = phase5;
+  else
+  {
+    move = phase6;
+    //flag = 0;
+  }
+  
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
+
+void defense_position(RobotClient client){
+  const char *move;
+  const char *phase1 = "./defense_position/1.txt"; //
+  const char *phase2 = "./defense_position/2.txt"; //
+
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(500+flag_time)) move = phase1;
+    else
+    {
+      move = phase2;
+      //flag = 0;
+      //stop_walk++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+}
 
 int main(int argc, char *argv[]) {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -159,12 +462,23 @@ int main(int argc, char *argv[]) {
 
   RobotClient client(host, port, verbosity);
   client.connectClient();
+  
   while (client.isOk()) {
     try {
-      //tchau(client);
-      walk(client);
       
+      //tchau(client);
+      //walk(client);
+      //standup_front(client); 
+      //kick_right_weak(client);
+      //kick_left_weak(client);
+      //turn_left(client);
+      //turn_right(client);
+      penalty(client);
+      //defense_position(client);
+      //fall_left(client);
+      //fall_right(client); 
 
+      
       SensorMeasurements sensors = client.receive();
       std::string printout;
       google::protobuf::TextFormat::PrintToString(sensors, &printout);

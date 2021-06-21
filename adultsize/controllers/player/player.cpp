@@ -780,7 +780,7 @@ int main(int argc, char *argv[]) {
   const int player_team = name[0] == 'r' ? RED : BLUE;
 
   PlayerServer server(allowed_hosts, port, player_id, player_team, robot);
-
+  
   while (robot->step(basic_time_step) != -1)
     server.step();
 
