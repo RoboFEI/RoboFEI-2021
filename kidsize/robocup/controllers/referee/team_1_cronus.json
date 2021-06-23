@@ -1,0 +1,26 @@
+{
+    "name": "RoboFEIAdult",
+    "players": {
+        "1": {
+            "proto": "Cronus",
+            "dockerTag": "latest",
+            "dockerCmd": "./client kvalim 10001",
+            "halfTimeStartingPose": {
+                "translation": [-5.4, -4.8, 1.03],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "reentryStartingPose": {
+                "translation": [-5, -4.8, 1.03],
+                "rotation": [0, 0, 1, 1.57]
+            },
+            "shootoutStartingPose": {
+                "translation": [3, -0.03, 1.03],
+                "rotation": [0, 0, 1, 0.0]
+            },
+            "goalKeeperStartingPose": {
+                "translation": [-7, 0, 1.03],
+                "rotation": [0, 0, 1, 0.0]
+            }
+        }
+    }
+}

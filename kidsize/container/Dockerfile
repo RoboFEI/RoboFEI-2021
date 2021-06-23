@@ -11,10 +11,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # Instalação de packages
 
-RUN apt-get update -y && apt-get upgrade -y 
-RUN apt-get install -y build-essential 
-RUN apt-get install -y git 
-RUN apt-get autoremove -y
+RUN apt update -y && apt-get upgrade -y 
+RUN apt install -y build-essential 
+RUN apt install -y git 
+RUN apt install -y libzmq3-dev
+RUN pip install -y zmq
+RUN apt autoremove -y
 
 # Obtendo o controlador do github e variáveis de conexão
 RUN mkdir -p /RoboCup \
@@ -36,4 +38,4 @@ WORKDIR $CONTROLLER
 ENV DEBIAN_FRONTEND=readline
 COPY entrypoint.sh /usr/local/bin/entrypoint
 
-ENTRYPOINT ["sh","/usr/local/bin/entrypoint"]
+#ENTRYPOINT ["sh","/usr/local/bin/entrypoint"]

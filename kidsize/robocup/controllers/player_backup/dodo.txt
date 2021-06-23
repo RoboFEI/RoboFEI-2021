@@ -1,0 +1,16 @@
+1. transformar exemplo.py em server de zmq
+
+2. transformar iniciar o server (exemplo.py) pelo c
+    - junto com spaw do controlador
+
+3. tranformar c em client de zmq
+
+4. enviar image para o  server
+ 4.1 lembrar de inverter o b e r
+ 4.2 lembrar de apagar o A, final do image
+
+5. no python transformar o vetor de char em numpy array
+
+6. passar esse numpy array na rede
+
+7. pegar results e enviar para o c 

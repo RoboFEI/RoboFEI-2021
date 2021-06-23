@@ -7,6 +7,7 @@ PROTO Prometheus [
   field SFVec3f    translation              -4 0 0.45 
   field SFRotation rotation                 0 0 1 1.5708  
   field SFString   name                     "blue player 1"  
+  field SFString   controller               "player"
   field MFString   controllerArgs           []      
   field SFString   customData               ""
   field SFFloat    XH540W270-torque14-8V    12.9
@@ -14,13 +15,12 @@ PROTO Prometheus [
   field SFFloat    XH540W270-damping14-8V   2.92
   field SFFloat    XH540W270-friction14-8V  1.49
   field SFFloat    backlash                 0.01 #0.004363323
-  field SFFloat    resolution               0.0015
-  field SFString   controller               "player"  
+  field SFFloat    resolution               0.0015  
   field SFBool     selfCollision            TRUE      
   field SFInt32    cameraWidth              800    
   field SFInt32    cameraHeight             600     
   
-  #protected
+#protected
   hiddenField SFString _model       "Prometheus"
   hiddenField SFString _description "RoboFEI's Prometheus modeled by team RoboFEI" 
 
@@ -41,23 +41,25 @@ PROTO Prometheus [
 ]
 
 {
-  %{
-    if fields.name.value ~= '' then
-      -- name is supposed to be something like "red player 2" or "blue player 1"
-      local words = {}
-
-      for word in fields.name.value:gmatch("%w+") do table.insert(words, word) end
-      color = words[1]
-      number = words[3]      
-    end
-  }%
   Robot {
+    
+    %{
+      if fields.name.value ~= '' then
+        -- name is supposed to be something like "red player 2" or "blue player 1"
+        local words = {}
+  
+        for word in fields.name.value:gmatch("%w+") do table.insert(words, word) end
+        color = words[1]
+        number = words[3]      
+      end
+    }%
+
     translation IS translation
     rotation IS rotation
     name IS name
     controllerArgs IS controllerArgs
-    customData IS customData
     controller IS controller
+    customData IS customData
     selfCollision IS selfCollision
     children [
       Transform {

@@ -2,7 +2,7 @@
     "name": "RoboFEI",
     "players": {
         "1": {
-            "proto": "Prometheus",
+            "proto": "PrometheusRobot",
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
@@ -23,7 +23,7 @@
             }
         },
         "2": {
-            "proto": "Prometheus",
+            "proto": "PrometheusRobot",
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
@@ -44,7 +44,7 @@
             }
         },
         "3": {
-            "proto": "Prometheus",
+            "proto": "PrometheusRobot",
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
@@ -65,7 +65,7 @@
             }
         },
         "4": {
-            "proto": "Prometheus",
+            "proto": "PrometheusRobot",
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
