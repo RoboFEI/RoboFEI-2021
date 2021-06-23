@@ -11,7 +11,7 @@ from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 
 context = zmq.Context()
 zmq_socket = context.socket(zmq.REQ)
-zmq_socket.connect("tcp://*:3737")
+zmq_socket.connect("tcp://172.17.0.2:3737")
 
 logger = logging.getLogger('game_controller')
 logger.setLevel(logging.DEBUG)
