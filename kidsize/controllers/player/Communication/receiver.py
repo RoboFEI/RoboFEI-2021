@@ -1,13 +1,13 @@
 import os
 import socket
 import time
-from datetime import datetime
 import logging
-
 import zmq
 
-from construct import Container, ConstError, Const
-from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
+from datetime   import datetime
+from typing     import Literal
+from construct  import Container, ConstError, Const
+from gamestate  import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 
 addr = os.environ.get('ROBOCUP_MIRROR_SERVER_IP')
 
@@ -23,7 +23,16 @@ console_handler.setFormatter(logging.Formatter("%(asctime)s %(message)s"))
 logger.addHandler(console_handler)
 
 TEAM_ROBOFEI = 13
-ROBOT_NUMBER = os.environ.get('ROBOCUP_ROBOT_ID')
+
+if   os.environ.get('ROBOCUP_ROBOT_ID') == '1':
+    ROBOT_NUMBER = 1
+elif os.environ.get('ROBOCUP_ROBOT_ID') == '2':
+    ROBOT_NUMBER = 2
+elif os.environ.get('ROBOCUP_ROBOT_ID') == '3':
+    ROBOT_NUMBER = 3
+else:
+    ROBOT_NUMBER = 4
+
 DEFAULT_LISTENING_HOST = '0.0.0.0'
 GAME_CONTROLLER_LISTEN_PORT = 3838
 GAME_CONTROLLER_ANSWER_PORT = 3939

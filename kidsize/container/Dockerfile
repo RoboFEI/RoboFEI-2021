@@ -20,8 +20,9 @@ RUN apt install -y libzmq3-dev
 RUN apt autoremove -y
 
 # Python dependencies
-RUN pip install zmq
 RUN pip install construct
+RUN pip install zmq
+
 
 # Obtendo o controlador do github e variáveis de conexão
 RUN mkdir -p /RoboCup && cd RoboCup \
