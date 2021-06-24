@@ -13,11 +13,7 @@ addr = os.environ.get('ROBOCUP_MIRROR_SERVER_IP')
 
 context = zmq.Context()
 zmq_socket = context.socket(zmq.REQ)
-<<<<<<< HEAD
 zmq_socket.connect("tcp://"+addr+":3737")
-=======
-zmq_socket.connect("tcp://255.255.255.255:3737")
->>>>>>> 9e37e8b348a1236edf63381fb857cfe86c7782fc
 
 logger = logging.getLogger('game_controller')
 logger.setLevel(logging.DEBUG)
