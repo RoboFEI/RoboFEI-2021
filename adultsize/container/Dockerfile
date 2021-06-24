@@ -3,23 +3,28 @@ FROM ubuntu:20.04
 # Define as informações do container
 LABEL maintainer="RoboFEI" \
       name="cronus_controller" \
-      version="1.2"
+      version="1.3"
 
 # Define variáveis do sistema (export)
 ENV DEBIAN_FRONTEND=noninteractive \
     CONTROLLER=/RoboCup/adultsize/controllers/player
 
 # Instalação de packages
+RUN apt update -y && apt-get upgrade -y 
+RUN apt install -y build-essential 
+RUN apt install -y python-dev
+RUN apt install -y python-is-python3
+RUN apt install -y python3-pip
+RUN apt install -y git 
+RUN apt install -y libzmq3-dev
+RUN apt autoremove -y
 
-RUN apt-get update -y
-RUN apt-get upgrade -y 
-RUN apt-get install -y build-essential 
-RUN apt-get install -y git 
-RUN apt-get autoremove -y
+# Python dependencies
+RUN pip install zmq
+RUN pip install construct
 
 # Obtendo o controlador do github e variáveis de conexão
-RUN mkdir -p /RoboCup \
-    && cd RoboCup \
+RUN mkdir -p /RoboCup && cd RoboCup \
     && git clone https://github.com/RoboFEI/RoboFEI-2021.git /RoboCup
 
 

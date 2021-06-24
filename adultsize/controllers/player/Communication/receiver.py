@@ -1,10 +1,19 @@
+import os
 import socket
 import time
 from datetime import datetime
 import logging
 
+import zmq
+
 from construct import Container, ConstError, Const
 from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
+
+addr = os.environ.get('ROBOCUP_MIRROR_SERVER_IP')
+
+context = zmq.Context()
+zmq_socket = context.socket(zmq.REQ)
+zmq_socket.connect("tcp://"+addr+":3737")
 
 logger = logging.getLogger('game_controller')
 logger.setLevel(logging.DEBUG)
@@ -14,7 +23,7 @@ console_handler.setFormatter(logging.Formatter("%(asctime)s %(message)s"))
 logger.addHandler(console_handler)
 
 TEAM_ROBOFEI = 17
-ROBOT_NUMBER = 1
+ROBOT_NUMBER = os.environ.get('ROBOCUP_ROBOT_ID')
 DEFAULT_LISTENING_HOST = '0.0.0.0'
 GAME_CONTROLLER_LISTEN_PORT = 3838
 GAME_CONTROLLER_ANSWER_PORT = 3939
@@ -134,6 +143,7 @@ class GameStateReceiver(object):
 class SampleGameStateReceiver(GameStateReceiver):
 
     def on_new_gamestate(self, state):
+
         #print(state)
         #print(state.secondary_state)
         
@@ -142,32 +152,50 @@ class SampleGameStateReceiver(GameStateReceiver):
         else:
             index = 1
 
-        if state.teams[index].players[ROBOT_NUMBER-1].penalty != 0: #vale para qualquer infracao do nosso robô:
+        if state.teams[index].players[ROBOT_NUMBER-1].penalty != 0: #vale para qualquer infracao do nosso robo:
             print ("penalty: service, pickup or incapable")
+
+        elif state.game_state == "STATE_PLAYING" and state.kickoff_team != TEAM_ROBOFEI  and state.secondary_state == "STATE_PENALTYSHOOT":
+            print ("penalty deles")
+            zmq_socket.send(b"penalty deles")
+            print(zmq_socket.recv())
+        elif state.game_state == "STATE_PLAYING" and state.kickoff_team == TEAM_ROBOFEI  and state.secondary_state == "STATE_PENALTYSHOOT":
+            print ("penalty nosso")
+            zmq_socket.send(b"penalty nosso")
+            print(zmq_socket.recv())
+
         elif state.game_state == "STATE_INITIAL":
             print ("initial")
+            zmq_socket.send(b"initial")
+            print(zmq_socket.recv())
         elif state.game_state == "STATE_READY":
             print ("ready")
-        elif state.game_state == "STATE_SET":
+            zmq_socket.send(b"ready")
+            print(zmq_socket.recv())
+
+        elif state.kickoff_team == TEAM_ROBOFEI and state.game_state == "STATE_PLAYING" and state.secondary_state == "STATE_PENALTYSHOOT":
+            print ("penaltykick")
+            zmq_socket.send(b"penaltykick")
+            print(zmq_socket.recv())
+
+        elif state.game_state == "STATE_SET" and state.secondary_state == "STATE_NORMAL" :
             print ("set")
+            zmq_socket.send(b"set")
+            print(zmq_socket.recv())
         elif state.kickoff_team == TEAM_ROBOFEI  and state.game_state == "STATE_PLAYING" and (state.secondary_state == "STATE_NORMAL" or state.secondary_state == "STATE_OVERTIME"):
             print ("play kickoff RoboFEI")
+            zmq_socket.send(b"kickoff RoboFEI")
+            print(zmq_socket.recv())
         elif state.kickoff_team != TEAM_ROBOFEI  and state.game_state == "STATE_PLAYING" and (state.secondary_state == "STATE_NORMAL" or state.secondary_state == "STATE_OVERTIME"):
             print ("play kickoff opponent")
-        elif state.secondary_state == "STATE_PENALTYKICK":
-            print ("penaltykick")
+            zmq_socket.send(b"kickoff opponent")
+            print(zmq_socket.recv())
 
 
-#        elif state.kickoff_team != TEAM_OPPONENT  and state.secondary_state == "STATE_PENALTYSHOOT":
-#            print ("penalty to RoboFei")
-#            bkb.write_int(mem,'COM_REFEREE',3)
-#        elif state.kickoff_team == TEAM_OPPONENT  and state.secondary_state == "STATE_PENALTYSHOOT":
-#            print ("penalty to opponent")
-#            bkb.write_int(mem,'COM_REFEREE',4)
         elif state.kickoff_team == "STATE_TIMEOUT":
             print ("timeout")
         else:
-            print ("não reconheci o comando...vamos jogar!")
+            print ("no reconheci o comando...vamos jogar!")
         print(datetime.now())
 
 

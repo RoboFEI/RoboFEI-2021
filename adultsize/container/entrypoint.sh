@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd /RoboCup/adultsize/controllers/player
-ADDR=${ROBOCUP_SIMULATOR_ADDR:=lars:10001}
+ADDR=${ROBOCUP_SIMULATOR_ADDR:=127.0.0.1:10001}
 
 IP=$(echo $ADDR | cut -d: -f1)
 PORT=$(echo $ADDR | cut -d: -f2)
