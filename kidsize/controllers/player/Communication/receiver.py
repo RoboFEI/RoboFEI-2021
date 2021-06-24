@@ -23,7 +23,7 @@ console_handler.setFormatter(logging.Formatter("%(asctime)s %(message)s"))
 logger.addHandler(console_handler)
 
 TEAM_ROBOFEI = 13
-ROBOT_NUMBER = os.environ.get('eROBOCUP_ROBOT_ID')
+ROBOT_NUMBER = os.environ.get('ROBOCUP_ROBOT_ID')
 DEFAULT_LISTENING_HOST = '0.0.0.0'
 GAME_CONTROLLER_LISTEN_PORT = 3838
 GAME_CONTROLLER_ANSWER_PORT = 3939
