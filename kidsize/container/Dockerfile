@@ -24,8 +24,7 @@ RUN pip install zmq
 RUN pip install construct
 
 # Obtendo o controlador do github e variáveis de conexão
-RUN mkdir -p /RoboCup \
-    && cd RoboCup \
+RUN mkdir -p /RoboCup && cd RoboCup \
     && git clone https://github.com/RoboFEI/RoboFEI-2021.git /RoboCup
 
 
@@ -43,4 +42,4 @@ WORKDIR $CONTROLLER
 ENV DEBIAN_FRONTEND=readline
 COPY entrypoint.sh /usr/local/bin/entrypoint
 
-#ENTRYPOINT ["sh","/usr/local/bin/entrypoint"]
+ENTRYPOINT ["sh","/usr/local/bin/entrypoint"]
