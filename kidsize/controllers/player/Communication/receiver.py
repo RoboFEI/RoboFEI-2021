@@ -1,17 +1,19 @@
+import os
 import socket
 import time
 from datetime import datetime
 import logging
-import time
 
 import zmq
 
 from construct import Container, ConstError, Const
 from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 
+addr = os.environ.get('ROBOCUP_MIRROR_SERVER_IP')
+
 context = zmq.Context()
 zmq_socket = context.socket(zmq.REQ)
-zmq_socket.connect("tcp://localhost:3737")
+zmq_socket.connect("tcp://"+addr+":3737")
 
 logger = logging.getLogger('game_controller')
 logger.setLevel(logging.DEBUG)

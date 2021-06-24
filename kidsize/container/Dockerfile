@@ -10,13 +10,18 @@ ENV DEBIAN_FRONTEND=noninteractive \
     CONTROLLER=/RoboCup/kidsize/controllers/player
 
 # Instalação de packages
-
 RUN apt update -y && apt-get upgrade -y 
 RUN apt install -y build-essential 
+RUN apt install -y python-dev
+RUN apt install -y python-is-python3
+RUN apt install -y python3-pip
 RUN apt install -y git 
 RUN apt install -y libzmq3-dev
-RUN pip install -y zmq
 RUN apt autoremove -y
+
+# Python dependencies
+RUN pip install zmq
+RUN pip install construct
 
 # Obtendo o controlador do github e variáveis de conexão
 RUN mkdir -p /RoboCup \
