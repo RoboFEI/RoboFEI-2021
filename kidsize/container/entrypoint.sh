@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+
 set -m
 cd /RoboCup/kidsize/controllers/player/Communication && python receiver.py &
 
 cd /RoboCup/kidsize/controllers/player
-ADDR=${ROBOCUP_SIMULATOR_ADDR:=127.0.0.1:10001}
+ADDR=${ROBOCUP_SIMULATOR_ADDR:=kvalim:10001}
 
 IP=$(echo $ADDR | cut -d: -f1)
 PORT=$(echo $ADDR | cut -d: -f2)

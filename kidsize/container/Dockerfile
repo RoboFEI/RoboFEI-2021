@@ -20,13 +20,15 @@ RUN apt install -y libzmq3-dev
 RUN apt autoremove -y
 
 # Python dependencies
-RUN pip install construct
 RUN pip install zmq
+RUN pip install construct
+
 
 
 # Obtendo o controlador do github e variáveis de conexão
 RUN mkdir -p /RoboCup && cd RoboCup \
     && git clone https://github.com/RoboFEI/RoboFEI-2021.git /RoboCup
+
 
 
 RUN apt-get install -y wget
@@ -40,7 +42,12 @@ ADD sudoers /etc/sudoers
 WORKDIR $CONTROLLER
 
 # Setup runtime
-ENV DEBIAN_FRONTEND=readline
+ENV DEBIAN_FRONTEND=readline \
+    ROBOCUP_MIRROR_SERVER_IP=kvalim 
+#####################################tirar linha de cima
+
 COPY entrypoint.sh /usr/local/bin/entrypoint
+
+EXPOSE 3737
 
 ENTRYPOINT ["sh","/usr/local/bin/entrypoint"]

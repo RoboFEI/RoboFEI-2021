@@ -79,6 +79,8 @@ class GameStateReceiver(object):
         while self.running:
             try:
                 self.receive_once()
+                zmq_socket.setsockopt(zmq.LINGER, 0)
+                
             except IOError as e:
                 logger.debug("Fehler beim Senden des KeepAlive: " + str(e))
 
@@ -191,13 +193,14 @@ class SampleGameStateReceiver(GameStateReceiver):
             print ("set")
             zmq_socket.send(b"set")
             print(zmq_socket.recv())
+
         elif state.kickoff_team == TEAM_ROBOFEI  and state.game_state == "STATE_PLAYING" and (state.secondary_state == "STATE_NORMAL" or state.secondary_state == "STATE_OVERTIME"):
-            print ("play kickoff RoboFEI")
-            zmq_socket.send(b"kickoff RoboFEI")
+            print ("kickoff nosso")
+            zmq_socket.send(b"kickoff nosso")
             print(zmq_socket.recv())
         elif state.kickoff_team != TEAM_ROBOFEI  and state.game_state == "STATE_PLAYING" and (state.secondary_state == "STATE_NORMAL" or state.secondary_state == "STATE_OVERTIME"):
-            print ("play kickoff opponent")
-            zmq_socket.send(b"kickoff opponent")
+            print ("kickoff deles")
+            zmq_socket.send(b"kickoff deles")
             print(zmq_socket.recv())
 
 
@@ -206,6 +209,8 @@ class SampleGameStateReceiver(GameStateReceiver):
         else:
             print ("no reconheci o comando...vamos jogar!")
         print(datetime.now())
+
+        
         
 
 
