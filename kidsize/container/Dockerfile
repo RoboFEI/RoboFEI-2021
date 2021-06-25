@@ -30,7 +30,6 @@ RUN mkdir -p /RoboCup && cd RoboCup \
     && git clone https://github.com/RoboFEI/RoboFEI-2021.git /RoboCup
 
 
-
 RUN apt-get install -y wget
 RUN wget http://archive.ubuntu.com/ubuntu/pool/main/p/protobuf/libprotobuf17_3.6.1.3-2ubuntu5_amd64.deb \
     && dpkg -i libprotobuf17_3.6.1.3-2ubuntu5_amd64.deb 

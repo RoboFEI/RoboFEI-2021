@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+git pull
 
 set -m
 cd /RoboCup/kidsize/controllers/player/Communication && python receiver.py &
