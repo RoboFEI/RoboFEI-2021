@@ -37,6 +37,8 @@ int flag_penalty = 0;
 int flag_time = 0;
 int flag_time_penalty = 0;
 int stop_walk = 0;
+int flag_walk = 0;
+int stop_turn = 0;
 
 void tchau(RobotClient client){
   const char *move;
@@ -67,6 +69,84 @@ void tchau(RobotClient client){
 
 }
 
+void test(RobotClient client){
+  const char *move;
+
+  int mult = 90.2;
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<=35)
+  {
+    const char *phase1 = "./walk/1.txt"; //"walk_ready"
+    const char *phase2 = "./walk/2.txt"; //levanta pe direito
+    const char *phase3 = "./walk/3.txt";
+    const char *phase4 = "./walk/4.txt";
+    const char *phase5 = "./walk/5.txt"; //"walk_ready'"
+    const char *phase6 = "./walk/6.txt"; //levanta pe esquerdo
+    const char *phase7 = "./walk/7.txt";
+    const char *phase8 = "./walk/8.txt";
+
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(mult+flag_time)) move = phase1;
+    else if(time <(2*mult+flag_time)) move = phase2;
+    else if(time <(3*mult+flag_time)) move = phase3;
+    else if(time <(4*mult+flag_time)) move = phase4;
+    else if(time <(5*mult+flag_time)) move = phase5;
+    else if(time <(6*mult+flag_time)) move = phase6;
+    else if(time <(7*mult+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      stop_turn = 0;
+      stop_walk++;
+    }
+  }
+
+
+  if(stop_walk>35)
+  {
+    if(stop_turn<30000)
+    {
+      const char *phase1 = "./turn_right/1.txt"; //
+      const char *phase2 = "./turn_right/2.txt"; //
+      const char *phase3 = "./turn_right/3.txt"; //
+      const char *phase4 = "./turn_right/4.txt"; //
+      const char *phase5 = "./turn_right/5.txt"; //
+      const char *phase6 = "./turn_right/6.txt"; //
+      const char *phase7 = "./turn_right/7.txt"; //
+      const char *phase8 = "./turn_right/8.txt"; //
+      if(flag == 0) flag_time = time;
+      flag++;
+
+      if(time<(100+flag_time)) move = phase1;
+      else if(time <(200+flag_time)) move = phase2;
+      else if(time <(300+flag_time)) move = phase3;
+      else if(time <(400+flag_time)) move = phase4;
+      else if(time <(500+flag_time)) move = phase5;
+      else if(time <(600+flag_time)) move = phase6;
+      else if(time <(700+flag_time)) move = phase7;
+      else
+      {
+        move = phase8;
+        flag = 0;
+        stop_turn++;
+      }
+    }
+    else{
+      stop_turn = 0;
+      stop_walk = 0;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+
+}
+
 void walk(RobotClient client){
   const char *move;
   const char *phase1 = "./walk/1.txt"; //"walk_ready"
@@ -78,27 +158,27 @@ void walk(RobotClient client){
   const char *phase7 = "./walk/7.txt";
   const char *phase8 = "./walk/8.txt";
 
-
+  int mult = 90;
   SensorMeasurements sensors = client.receive();
   int time = sensors.time();
 
-  if(stop_walk<5)
+  if(stop_walk<=38000)
   {
     if(flag == 0) flag_time = time;
     flag++;
 
-    if(time<(50+flag_time)) move = phase1;
-    else if(time <(100+flag_time)) move = phase2;
-    else if(time <(150+flag_time)) move = phase3;
-    else if(time <(200+flag_time)) move = phase4;
-    else if(time <(250+flag_time)) move = phase5;
-    else if(time <(300+flag_time)) move = phase6;
-    else if(time <(350+flag_time)) move = phase7;
+    if(time<(mult+flag_time)) move = phase1;
+    else if(time <(2*mult+flag_time)) move = phase2;
+    else if(time <(3*mult+flag_time)) move = phase3;
+    else if(time <(4*mult+flag_time)) move = phase4;
+    else if(time <(5*mult+flag_time)) move = phase5;
+    else if(time <(6*mult+flag_time)) move = phase6;
+    else if(time <(7*mult+flag_time)) move = phase7;
     else
     {
       move = phase8;
       flag = 0;
-      //stop_wave++;
+      stop_walk++;
     }
   }
 
@@ -467,13 +547,16 @@ int main(int argc, char *argv[]) {
     try {
       
       //tchau(client);
+      if(flag_walk>1000)
+        test(client);
+        flag_walk++;
       //walk(client);
       //standup_front(client); 
       //kick_right_weak(client);
       //kick_left_weak(client);
       //turn_left(client);
       //turn_right(client);
-      penalty(client);
+      //penalty(client);
       //defense_position(client);
       //fall_left(client);
       //fall_right(client); 

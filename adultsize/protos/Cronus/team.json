@@ -2,7 +2,7 @@
     "name": "RoboFEIAdult",
     "players": {
         "1": {
-            "proto": "CronusRobot",
+            "proto": "Cronus",
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {
@@ -23,7 +23,7 @@
             }
         },
         "2": {
-            "proto": "CronusRobot",
+            "proto": "Cronus",
             "dockerTag": "latest",
             "dockerCmd": "./client ${IP} ${PORT}",
             "halfTimeStartingPose": {

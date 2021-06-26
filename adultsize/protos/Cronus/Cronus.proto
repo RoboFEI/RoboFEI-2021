@@ -112,7 +112,7 @@ PROTO Cronus [
                       device [
                         RotationalMotor {
                           name "RightHipRoll [hip]"
-                          maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                          maxVelocity IS XH540W270-vel14-8Velocity
                           minPosition -2.83
                           maxPosition 2.83
                           maxTorque 25.8
@@ -171,7 +171,7 @@ PROTO Cronus [
                             device [
                               RotationalMotor {
                                 name "RightLegPitch [leg]"
-                                maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                maxVelocity IS XH540W270-vel14-8Velocity
                                 minPosition -2.83
                                 maxPosition 2.83
                                 maxTorque 25.8
@@ -195,7 +195,7 @@ PROTO Cronus [
                                   device [
                                     RotationalMotor {
                                       name "RightKnee [leg]"
-                                      maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                      maxVelocity IS XH540W270-vel14-8Velocity
                                       minPosition -2.83
                                       maxPosition 2.83
                                       maxTorque 25.8
@@ -250,7 +250,7 @@ PROTO Cronus [
                                         device [
                                           RotationalMotor {
                                             name "RightFootPitch [foot]"
-                                            maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                            maxVelocity IS XH540W270-vel14-8Velocity
                                             minPosition -2.83
                                             maxPosition 2.83
                                             maxTorque IS XH540W270-torque14-8V
@@ -275,7 +275,7 @@ PROTO Cronus [
                                               device [
                                                 RotationalMotor {
                                                   name "RightFootRoll [foot]"
-                                                  maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                                  maxVelocity IS XH540W270-vel14-8Velocity
                                                   minPosition -2.83
                                                   maxPosition 2.83
                                                   maxTorque IS XH540W270-torque14-8V
@@ -582,7 +582,7 @@ PROTO Cronus [
             device [
               RotationalMotor {
                 name "LeftHipYaw [hip]"
-                maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                maxVelocity IS XH540W270-vel14-8Velocity
                 minPosition -2.83
                 maxPosition 2.83
                 maxTorque IS XH540W270-torque14-8V
@@ -610,7 +610,7 @@ PROTO Cronus [
                       device [
                         RotationalMotor {
                           name "LeftHipRoll [hip]"
-                          maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                          maxVelocity IS XH540W270-vel14-8Velocity
                           minPosition -2.83
                           maxPosition 2.83
                           maxTorque 25.8
@@ -669,7 +669,7 @@ PROTO Cronus [
                             device [
                               RotationalMotor {
                                 name "LeftLegPitch [leg]"
-                                maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                maxVelocity IS XH540W270-vel14-8Velocity
                                 minPosition -2.83
                                 maxPosition 2.83
                                 maxTorque 25.8
@@ -693,7 +693,7 @@ PROTO Cronus [
                                   device [
                                     RotationalMotor {
                                       name "LeftKnee [leg]"
-                                      maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                      maxVelocity IS XH540W270-vel14-8Velocity
                                       minPosition -2.83
                                       maxPosition 2.83
                                       maxTorque 25.8
@@ -748,7 +748,7 @@ PROTO Cronus [
                                         device [
                                           RotationalMotor {
                                             name "LeftFootPitch [foot]"
-                                            maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                            maxVelocity IS XH540W270-vel14-8Velocity
                                             minPosition -2.83
                                             maxPosition 2.83
                                             maxTorque IS XH540W270-torque14-8V
@@ -773,7 +773,7 @@ PROTO Cronus [
                                               device [
                                                 RotationalMotor {
                                                   name "LeftFootRoll [foot]"
-                                                  maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                                                  maxVelocity IS XH540W270-vel14-8Velocity
                                                   minPosition -2.83
                                                   maxPosition 2.83
                                                   maxTorque IS XH540W270-torque14-8V
@@ -1081,7 +1081,7 @@ PROTO Cronus [
             device [
               RotationalMotor {
                 name "RightShoulderRoll [shoulder]"
-                maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                maxVelocity IS XH540W270-vel14-8Velocity
                 minPosition -2.83
                 maxPosition 2.83
                 maxTorque IS XH540W270-torque14-8V
@@ -1106,7 +1106,7 @@ PROTO Cronus [
                   device [
                     RotationalMotor {
                       name "RightArmPitch [arm]"
-                      maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                      maxVelocity IS XH540W270-vel14-8Velocity
                       minPosition -2.83
                       maxPosition 2.83
                       maxTorque IS XH540W270-torque14-8V
@@ -1129,7 +1129,7 @@ PROTO Cronus [
                         device [
                           RotationalMotor {
                             name "RightElbowPitch [arm]"
-                            maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                            maxVelocity IS XH540W270-vel14-8Velocity
                             minPosition -2.83
                             maxPosition 2.83
                             maxTorque IS XH540W270-torque14-8V
@@ -1401,7 +1401,7 @@ PROTO Cronus [
             device [
               RotationalMotor {
                 name "LeftShoulderRoll [shoulder]"
-                maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                maxVelocity IS XH540W270-vel14-8Velocity
                 minPosition -2.83
                 maxPosition 2.83
                 maxTorque IS XH540W270-torque14-8V
@@ -1426,7 +1426,7 @@ PROTO Cronus [
                   device [
                     RotationalMotor {
                       name "LeftArmPitch [arm]"
-                      maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                      maxVelocity IS XH540W270-vel14-8Velocity
                       minPosition -2.83
                       maxPosition 2.83
                       maxTorque IS XH540W270-torque14-8V
@@ -1449,7 +1449,7 @@ PROTO Cronus [
                         device [
                           RotationalMotor {
                             name "LeftElbowPitch [arm]"
-                            maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                            maxVelocity IS XH540W270-vel14-8Velocity
                             minPosition -2.83
                             maxPosition 2.83
                             maxTorque IS XH540W270-torque14-8V
@@ -1721,7 +1721,7 @@ PROTO Cronus [
             device [
               RotationalMotor {
                 name "Neck [head]"
-                maxVelocity IS XH540W270-vel14-8Velocity 3.87
+                maxVelocity IS XH540W270-vel14-8Velocity
                 minPosition -1.075
                 maxPosition 1.075
                 maxTorque IS XH540W270-torque14-8V
