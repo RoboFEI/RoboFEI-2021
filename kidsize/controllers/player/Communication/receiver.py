@@ -1,13 +1,13 @@
 import os
 import socket
 import time
-from datetime import datetime
 import logging
-
 import zmq
 
-from construct import Container, ConstError, Const
-from gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
+from datetime   import datetime
+from typing     import Literal
+from construct  import Container, ConstError, Const
+from gamestate  import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 
 addr = os.environ.get('ROBOCUP_MIRROR_SERVER_IP')
 
@@ -23,7 +23,16 @@ console_handler.setFormatter(logging.Formatter("%(asctime)s %(message)s"))
 logger.addHandler(console_handler)
 
 TEAM_ROBOFEI = 13
-ROBOT_NUMBER = os.environ.get('ROBOCUP_ROBOT_ID')
+
+if   os.environ.get('ROBOCUP_ROBOT_ID') == '1':
+    ROBOT_NUMBER = 1
+elif os.environ.get('ROBOCUP_ROBOT_ID') == '2':
+    ROBOT_NUMBER = 2
+elif os.environ.get('ROBOCUP_ROBOT_ID') == '3':
+    ROBOT_NUMBER = 3
+else:
+    ROBOT_NUMBER = 4
+
 DEFAULT_LISTENING_HOST = '0.0.0.0'
 GAME_CONTROLLER_LISTEN_PORT = 3838
 GAME_CONTROLLER_ANSWER_PORT = 3939
@@ -70,6 +79,8 @@ class GameStateReceiver(object):
         while self.running:
             try:
                 self.receive_once()
+                zmq_socket.setsockopt(zmq.LINGER, 0)
+                
             except IOError as e:
                 logger.debug("Fehler beim Senden des KeepAlive: " + str(e))
 
@@ -182,13 +193,14 @@ class SampleGameStateReceiver(GameStateReceiver):
             print ("set")
             zmq_socket.send(b"set")
             print(zmq_socket.recv())
+
         elif state.kickoff_team == TEAM_ROBOFEI  and state.game_state == "STATE_PLAYING" and (state.secondary_state == "STATE_NORMAL" or state.secondary_state == "STATE_OVERTIME"):
-            print ("play kickoff RoboFEI")
-            zmq_socket.send(b"kickoff RoboFEI")
+            print ("kickoff nosso")
+            zmq_socket.send(b"kickoff nosso")
             print(zmq_socket.recv())
         elif state.kickoff_team != TEAM_ROBOFEI  and state.game_state == "STATE_PLAYING" and (state.secondary_state == "STATE_NORMAL" or state.secondary_state == "STATE_OVERTIME"):
-            print ("play kickoff opponent")
-            zmq_socket.send(b"kickoff opponent")
+            print ("kickoff deles")
+            zmq_socket.send(b"kickoff deles")
             print(zmq_socket.recv())
 
 
@@ -197,6 +209,8 @@ class SampleGameStateReceiver(GameStateReceiver):
         else:
             print ("no reconheci o comando...vamos jogar!")
         print(datetime.now())
+
+        
         
 
 

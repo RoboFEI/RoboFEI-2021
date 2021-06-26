@@ -375,12 +375,12 @@ void standup_front(RobotClient client){
   else if(time <(1500+flag_time)) move = phase3;
   else if(time <(2000+flag_time)) move = phase4;
   else if(time <(2500+flag_time)) move = phase5;
+  else if(time <(20000+flag_time)) move = phase5;
   else
   {
     move = phase6;
     flag = 0;
     flag_caido = 0;
-    sleep(1);
   }
 
   ActuatorRequests request = RobotClient::buildRequestMessage(move);
@@ -451,6 +451,7 @@ void defense_position(RobotClient client){
 }
 
 int flagg = 0;
+int flag_fall = 0;
 
 int valorint;
 
@@ -469,10 +470,10 @@ void read_accel(RobotClient client){
       valorint = stoi(valor);
       flag_caido = 0;
     }
+
     if(valorint < 115) {
-      flag_caido = 1;
       standup_back(client);
-      
+      flag_caido = 1;
     }
     if(valorint > 140) {
       flag_caido = 1;
@@ -495,6 +496,7 @@ int main(int argc, char *argv[]) {
   void *responder = zmq_socket (context, ZMQ_REP);
   int rc = zmq_bind (responder, "tcp://*:3737");
   assert (rc == 0);
+
 
 
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -545,23 +547,25 @@ int main(int argc, char *argv[]) {
 
       char buffer [14];
       memset(buffer, 0, sizeof(buffer));
+
       zmq_send (responder, ".", 1, 0);      
 
       zmq_recv (responder, buffer, 14, 0);
       printf ("Game State: %s \n", buffer); 
-      std::string buf = buffer;
-      int zmq_msg_close (zmq_msg_t *buffer);
       
+      std::string buf = buffer;
+
 
       if(buf == "initial") zmq_send(responder, "listening", 9, 0);
 
-      if(buf == "ready" || buf == "kickoff opp" || buf == "kickoff Rob" || buf == "set") 
+      if(buf == "ready" || buf == "kickoff nosso" || buf == "set") 
       {
-        zmq_send(responder, "walk", 4, 0); 
+        //zmq_send(responder, "walk", 4, 0); 
         read_accel(client);             
       }
 
 
+      //PENALTY
       if(buf == "penalty nosso") 
       {
         zmq_send (responder, "batendo penalty", 15, 0); 
@@ -587,7 +591,9 @@ int main(int argc, char *argv[]) {
       //fall_left(client);
       //fall_right(client); 
       
-      cout << flag_caido << endl;
+      //cout << flag_caido << endl;
+
+      
 
 
     } catch (const std::runtime_error &exc) {
