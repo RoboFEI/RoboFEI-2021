@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
+#include <stdio.h>
 #include <string.h>
 #include <iostream>
 
@@ -24,25 +24,6 @@
 #endif
 
 #include "robot_client.hpp"
-
-//  Hello World server
-#include <zmq.hpp>
-
-
-#include <unistd.h>
-#include <assert.h>
-
-
-#include <sys/types.h>
-#include <sys/stat.h>
-
-
-#include <fstream>
-#include <fcntl.h>
-#include <google/protobuf/io/coded_stream.h>
-using namespace std;
-using google::protobuf::io::FileInputStream;
-using google::protobuf::io::FileOutputStream;
 
 
 static void usage(const std::string &error_msg = "") {
@@ -56,7 +37,44 @@ int flag_penalty = 0;
 int flag_time = 0;
 int flag_time_penalty = 0;
 int stop_walk = 0;
-int flag_caido = 0;
+
+void tchau(RobotClient client){
+  const char *move;
+  const char *levanta_braco = "motor_positions {name: 'LeftArmPitch [arm]'  position: -2.434}  motor_positions {name: 'LeftShoulderRoll [shoulder]'  position: 2}";
+  const char *levanta = "motor_positions {  name: 'LeftElbowPitch [arm]'  position: 2.1}";
+  const char *abaixa = "motor_positions {  name: 'LeftElbowPitch [arm]'  position: 1.2}";
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(500+flag_time)) move = levanta_braco;
+    else if(time <(1000+flag_time)) move = levanta;
+    else
+    {
+      move = abaixa;
+      flag = 0;
+      //stop_wave++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+
+  //std::string out = google::protobuf::TextFormat::PrintToString(sensors.position_sensors(), &out);
+  //std::cout << sensors.position_sensors(1).value() << std::endl;
+  //std::string printout;
+  //google::protobuf::TextFormat::PrintToString(sensors, &printout);
+  //std::cout << time << std::endl;
+  //std::cout << motorPosition.position() << std::endl;
+  
+ 
+
+}
 
 void walk(RobotClient client){
   const char *move;
@@ -73,65 +91,39 @@ void walk(RobotClient client){
   SensorMeasurements sensors = client.receive();
   int time = sensors.time();
 
-  if(flag == 0) flag_time = time;
-  flag++;
-
-    if(time<(30+flag_time)) move = phase1;
-    else if(time <(60+flag_time)) move = phase2;
-    else if(time <(90+flag_time)) move = phase3;
-    else if(time <(120+flag_time)) move = phase4;
-    else if(time <(150+flag_time)) move = phase5;
-    else if(time <(180+flag_time)) move = phase6;
-    else if(time <(210+flag_time)) move = phase7;
-  else
+  if(stop_walk<5)
   {
-    move = phase8;
-    flag = 0;
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(50+flag_time)) move = phase1;
+    else if(time <(100+flag_time)) move = phase2;
+    else if(time <(150+flag_time)) move = phase3;
+    else if(time <(200+flag_time)) move = phase4;
+    else if(time <(250+flag_time)) move = phase5;
+    else if(time <(300+flag_time)) move = phase6;
+    else if(time <(350+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      //stop_wave++;
+    }
   }
-  
+
   ActuatorRequests request = RobotClient::buildRequestMessage(move);
   client.sendRequest(request);
+
 }
 
 void kick_right_weak(RobotClient client){
   const char *move;
-  const char *phase1 = "./kick_right_weak/1.txt"; //
-  const char *phase2 = "./kick_right_weak/2.txt"; //
-  const char *phase3 = "./kick_right_weak/3.txt"; //
-  const char *phase4 = "./kick_right_weak/4.txt"; //
-  const char *phase5 = "./kick_right_weak/5.txt"; //
-  const char *phase6 = "./kick_right_weak/6.txt"; //
-
-  SensorMeasurements sensors = client.receive();
-  int time = sensors.time();
-
-  if(flag == 0) flag_time = time;
-  flag++;
-
-  if(time<(250+flag_time)) move = phase2;
-  else if(time <(400+flag_time)) move = phase3;
-  else if(time <(550+flag_time)) move = phase4;
-  else if(time <(800+flag_time)) move = phase5;
-  else
-  {
-    move = phase6;
-    flag = 0;
-    stop_walk = 0;
-  }
-  
-
-  ActuatorRequests request = RobotClient::buildRequestMessage(move);
-  client.sendRequest(request);
-}
-
-void kick_left_weak(RobotClient client){
-  const char *move;
-  const char *phase1 = "./kick_left_weak/1.txt"; //abre os bracos
-  const char *phase2 = "./kick_left_weak/2.txt"; //fecha os bracos
-  const char *phase3 = "./kick_left_weak/3.txt"; //pe para tras
-  const char *phase4 = "./kick_left_weak/4.txt"; //chuta
-  const char *phase5 = "./kick_left_weak/5.txt"; //retorna o pe
-  const char *phase6 = "./kick_left_weak/6.txt"; //abre os bracos
+  const char *phase1 = "./kick_right_weak/1.txt"; //abre os bracos
+  const char *phase2 = "./kick_right_weak/2.txt"; //fecha os bracos
+  const char *phase3 = "./kick_right_weak/3.txt"; //pe para tras
+  const char *phase4 = "./kick_right_weak/4.txt"; //chuta
+  const char *phase5 = "./kick_right_weak/5.txt"; //retorna o pe
+  const char *phase6 = "./kick_right_weak/6.txt"; //abre os bracos
 
   SensorMeasurements sensors = client.receive();
   int time = sensors.time();
@@ -158,90 +150,13 @@ void kick_left_weak(RobotClient client){
   client.sendRequest(request);
 }
 
-void turn_left(RobotClient client){
-  const char *move;
-  const char *phase1 = "./turn_left/1.txt"; //
-  const char *phase2 = "./turn_left/2.txt"; //
-  const char *phase3 = "./turn_left/3.txt"; //
-  const char *phase4 = "./turn_left/4.txt"; //
-  const char *phase5 = "./turn_left/5.txt"; //
-  const char *phase6 = "./turn_left/6.txt"; //
-  const char *phase7 = "./turn_left/7.txt"; //
-  const char *phase8 = "./turn_left/8.txt"; //
-
-  SensorMeasurements sensors = client.receive();
-  int time = sensors.time();
-
-  if(stop_walk<5)
-  {
-    if(flag == 0) flag_time = time;
-    flag++;
-
-    if(time<(100+flag_time)) move = phase1;
-    else if(time <(200+flag_time)) move = phase2;
-    else if(time <(300+flag_time)) move = phase3;
-    else if(time <(400+flag_time)) move = phase4;
-    else if(time <(500+flag_time)) move = phase5;
-    else if(time <(600+flag_time)) move = phase6;
-    else if(time <(700+flag_time)) move = phase7;
-    else
-    {
-      move = phase8;
-      flag = 0;
-      //stop_walk++;
-    }
-  }
-
-  ActuatorRequests request = RobotClient::buildRequestMessage(move);
-  client.sendRequest(request);
-}
-
-void turn_right(RobotClient client){
-  const char *move;
-  const char *phase1 = "./turn_right/1.txt"; //
-  const char *phase2 = "./turn_right/2.txt"; //
-  const char *phase3 = "./turn_right/3.txt"; //
-  const char *phase4 = "./turn_right/4.txt"; //
-  const char *phase5 = "./turn_right/5.txt"; //
-  const char *phase6 = "./turn_right/6.txt"; //
-  const char *phase7 = "./turn_right/7.txt"; //
-  const char *phase8 = "./turn_right/8.txt"; //
-
-  SensorMeasurements sensors = client.receive();
-  int time = sensors.time();
-
-  if(stop_walk<5)
-  {
-    if(flag == 0) flag_time = time;
-    flag++;
-
-    if(time<(100+flag_time)) move = phase1;
-    else if(time <(200+flag_time)) move = phase2;
-    else if(time <(300+flag_time)) move = phase3;
-    else if(time <(400+flag_time)) move = phase4;
-    else if(time <(500+flag_time)) move = phase5;
-    else if(time <(600+flag_time)) move = phase6;
-    else if(time <(700+flag_time)) move = phase7;
-    else
-    {
-      move = phase8;
-      flag = 0;
-      //stop_walk++;
-    }
-  }
-
-  ActuatorRequests request = RobotClient::buildRequestMessage(move);
-  client.sendRequest(request);
-}
-
 void penalty(RobotClient client){
   const char *move;
-  
 
   SensorMeasurements sensors = client.receive();
   int time = sensors.time();
 
-  if(stop_walk<=15)
+  if(stop_walk<=38)
   {
     const char *phase1 = "./walk/1.txt"; //"walk_ready"
     const char *phase2 = "./walk/2.txt"; //levanta pe direito
@@ -253,28 +168,28 @@ void penalty(RobotClient client){
     const char *phase8 = "./walk/8.txt";
 
     if(flag == 0) flag_time = time;
+
     flag++;
 
-    if(time<(30+flag_time)) move = phase1;
-    else if(time <(60+flag_time)) move = phase2;
-    else if(time <(90+flag_time)) move = phase3;
-    else if(time <(120+flag_time)) move = phase4;
-    else if(time <(150+flag_time)) move = phase5;
-    else if(time <(180+flag_time)) move = phase6;
-    else if(time <(210+flag_time)) move = phase7;
+    if(time<(50+flag_time)) move = phase1;
+    else if(time <(100+flag_time)) move = phase2;
+    else if(time <(150+flag_time)) move = phase3;
+    else if(time <(200+flag_time)) move = phase4;
+    else if(time <(250+flag_time)) move = phase5;
+    else if(time <(300+flag_time)) move = phase6;
+    //else if(time <(350+flag_time)) move = phase7;
     else
     {
-      move = phase8;
+      move = phase7;
       flag = 0;
       stop_walk++;
-      cout << stop_walk << endl;
     }
   }
 
-
-  if(stop_walk > 15)
+  if(stop_walk > 38)
   {
     const char *phase1 = "./kick_right_weak/1.txt"; //abre os bracos
+
     const char *phase2 = "./kick_right_weak/2.txt"; //pe para tras
     const char *phase3 = "./kick_right_weak/3.txt"; //chuta
     const char *phase4 = "./kick_right_weak/4.txt"; //chuta
@@ -288,6 +203,8 @@ void penalty(RobotClient client){
     else if(time <(400+flag_time)) move = phase3;
     else if(time <(550+flag_time)) move = phase4;
     else if(time <(800+flag_time)) move = phase5;
+    //else if(time <(1250+flag_time)) move = phase4;
+    //else if(time <(1600+flag_time)) move = phase5;
     else
     {
       move = phase6;
@@ -296,7 +213,7 @@ void penalty(RobotClient client){
     }
   }
 
-  ActuatorRequests request = RobotClient::buildRequestMessage(move);  
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
   client.sendRequest(request);
 }
 
@@ -375,47 +292,10 @@ void standup_front(RobotClient client){
   else if(time <(1500+flag_time)) move = phase3;
   else if(time <(2000+flag_time)) move = phase4;
   else if(time <(2500+flag_time)) move = phase5;
-  else if(time <(20000+flag_time)) move = phase5;
   else
   {
     move = phase6;
-    flag = 0;
-    flag_caido = 0;
-  }
-
-  ActuatorRequests request = RobotClient::buildRequestMessage(move);
-  client.sendRequest(request);
-}
-
-void standup_back(RobotClient client){
-  const char *move;
-  const char *phase1 = "./standup_back/1.txt"; //
-  const char *phase2 = "./standup_back/2.txt"; //
-  const char *phase3 = "./standup_back/3.txt"; //
-  const char *phase4 = "./standup_back/4.txt"; //
-  const char *phase5 = "./standup_back/5.txt"; //
-  const char *phase6 = "./standup_back/6.txt"; //
-  const char *phase7 = "./standup_back/7.txt"; //
-
-  SensorMeasurements sensors = client.receive();
-  int time = sensors.time();
-
-
-  if(flag == 0) flag_time = time;
-  flag++;
-
-  if(time<(500+flag_time)) move = phase1;
-  else if(time <(1000+flag_time)) move = phase2;
-  else if(time <(1500+flag_time)) move = phase3;
-  else if(time <(2000+flag_time)) move = phase4;
-  else if(time <(2500+flag_time)) move = phase5;
-  else if(time <(3000+flag_time)) move = phase6;
-  else
-  {
-    move = phase7;
-    flag = 0;
-    flag_caido = 0;
-    sleep(1);
+    //flag = 0;
   }
   
 
@@ -450,64 +330,14 @@ void defense_position(RobotClient client){
   client.sendRequest(request);
 }
 
-int flagg = 0;
-int flag_fall = 0;
-
-int valorint;
-
-void read_accel(RobotClient client){
-  string valor;
-
-  SensorMeasurements sensors = client.receive();
-  std::string printout;
-  google::protobuf::TextFormat::PrintToString(sensors, &printout);
-
-  if(flagg>10){
-    if(flag_caido == 0) {
-      string y = ("Y: ");
-      size_t found = printout.find(y);
-      valor = printout.substr(found+3,3);
-      valorint = stoi(valor);
-      flag_caido = 0;
-    }
-
-    if(valorint < 115) {
-      standup_back(client);
-      flag_caido = 1;
-    }
-    if(valorint > 140) {
-      flag_caido = 1;
-      standup_front(client);
-    } 
-    if (flag_caido != 1) walk(client);
-    
-    cout << printout << endl; 
-  }
-
-  flagg++;
-  
-}
-
-
-
 int main(int argc, char *argv[]) {
-    //  Socket to talk to clients
-  void *context = zmq_ctx_new ();
-  void *responder = zmq_socket (context, ZMQ_REP);
-  int rc = zmq_bind (responder, "tcp://*:3737");
-  assert (rc == 0);
-
-
-
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-
+  
   int port = -1;
   std::string host;
-
-  int gyro_time_step = -1;
   int arg_idx = 1;
-  int verbosity = 2;
+  int verbosity = 3;
   while (arg_idx < argc) {
     std::string current_arg(argv[arg_idx]);
     // Treating arguments
@@ -517,7 +347,9 @@ int main(int argc, char *argv[]) {
           usage("Missing value for verbosity");
         verbosity = std::stoi(argv[arg_idx + 1]);
         arg_idx++;
-      } else  // current_arg == "-h" or "--help" or anything else
+      } else if (current_arg == "-h" || current_arg == "--help")
+        usage();
+      else
         usage();
     } else if (host.length() == 0)
       host = current_arg;
@@ -534,68 +366,23 @@ int main(int argc, char *argv[]) {
 
   RobotClient client(host, port, verbosity);
   client.connectClient();
-
-  int f = 0;
-
-  const char *accel = "accel.txt"; 
-  ActuatorRequests request = RobotClient::buildRequestMessage(accel);
-  client.sendRequest(request);
   
   while (client.isOk()) {
     try {
-      SensorMeasurements sensors = client.receive();
-
-      char buffer [14];
-      memset(buffer, 0, sizeof(buffer));
-
-      zmq_send (responder, ".", 1, 0);      
-
-      zmq_recv (responder, buffer, 14, 0);
-      printf ("Game State: %s \n", buffer); 
       
-      std::string buf = buffer;
-
-
-      if(buf == "initial") zmq_send(responder, "listening", 9, 0);
-
-      if(buf == "ready" || buf == "kickoff nosso" || buf == "set") 
-      {
-        //zmq_send(responder, "walk", 4, 0); 
-        read_accel(client);             
-      }
-
-
-      //PENALTY
-      if(buf == "penalty nosso") 
-      {
-        zmq_send (responder, "batendo penalty", 15, 0); 
-        penalty(client);
-                
-      }
-      if(buf == "penalty deles") 
-      {
-        zmq_send (responder, "defendendo penalty", 18, 0); 
-        defense_position(client);
-                
-      }
-
+      //tchau(client);
       //walk(client);
-
-      //standup_front(client); 
-      //standup_back(client);    //nao funcionando 
       //kick_right_weak(client);
-      //kick_left_weak(client);
-      //turn_left(client);
-      //turn_right(client);
-      //penalty(client);
+      walk(client);
       //fall_left(client);
       //fall_right(client); 
-      
-      //cout << flag_caido << endl;
-
-      
+      //standup_front(client); 
+      //defense_position(client);
 
 
+      SensorMeasurements sensors = client.receive();
+      std::string printout;
+      google::protobuf::TextFormat::PrintToString(sensors, &printout);
     } catch (const std::runtime_error &exc) {
       std::cerr << "Runtime error: " << exc.what() << std::endl;
     }
