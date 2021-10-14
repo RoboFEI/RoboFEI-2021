@@ -4,8 +4,7 @@ LIBS = -lws2_32
 CXX=g++
 else
 TARGET = test_client
-INCLUDE = -I"/usr/local/lib"
-LIBS = -lpthread -lzmq #-lcjson
+LIBS = -lpthread
 endif
 ifeq ($(MAKECMDGOALS),)
 GOAL = release

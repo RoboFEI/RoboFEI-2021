@@ -1,4 +1,0 @@
-sensor_time_steps {
-  name: "Accelerometer"
-  timeStep: 8
-}

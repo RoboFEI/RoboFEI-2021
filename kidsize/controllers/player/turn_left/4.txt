@@ -1,10 +1,10 @@
 motor_positions {
   name: "RightShoulderRoll [shoulder]"
-  position: -0.0275977
+  position: 0.0015332
 }
 motor_positions {
   name: "LeftShoulderRoll [shoulder]"
-  position: 0.0306641
+  position: 0.0015332
 }
 motor_positions {
   name: "RightArmPitch [arm]"
@@ -24,49 +24,49 @@ motor_positions {
 }
 motor_positions {
   name: "RightHipYaw [hip]"
-  position: 0.0965918
+  position: 0.0720605
 }
 motor_positions {
   name: "LeftHipYaw [hip]"
-  position: -0.090459
+  position: -0.0643945
 }
 motor_positions {
   name: "RightHipRoll [hip]"
-  position: 0.0797266
+  position: 0.0965918
 }
 motor_positions {
   name: "LeftHipRoll [hip]"
-  position: -0.15792
+  position: -0.194717
 }
 motor_positions {
   name: "RightLegPitch [leg]"
-  position: -0.788066
+  position: -0.82793
 }
 motor_positions {
   name: "LeftLegPitch [leg]"
-  position: -0.62708
+  position: -0.608682
 }
 motor_positions {
   name: "RightKnee [leg]"
-  position: 1.46574
+  position: 1.524
 }
 motor_positions {
   name: "LeftKnee [leg]"
-  position: 1.08551
+  position: 1.06864
 }
 motor_positions {
   name: "RightFootPitch [foot]"
-  position: -0.875459
+  position: -0.895391
 }
 motor_positions {
   name: "LeftFootPitch [foot]"
-  position: -0.659277
+  position: -0.660811
 }
 motor_positions {
   name: "RightFootRoll [foot]"
-  position: 0.0919922
+  position: 0.102725
 }
 motor_positions {
   name: "LeftFootRoll [foot]"
-  position: -0.0337305
+  position: -0.0429297
 }

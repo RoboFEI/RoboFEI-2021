@@ -48,11 +48,11 @@ motor_positions {
 }
 motor_positions {
   name: "RightKnee [leg]"
-  position: 0.162178
+  position: 0.262178
 }
 motor_positions {
   name: "LeftKnee [leg]"
-  position: 0.162178
+  position: 0.262178
 }
 motor_positions {
   name: "RightFootPitch [foot]"

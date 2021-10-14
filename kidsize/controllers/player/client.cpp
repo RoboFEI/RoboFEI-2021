@@ -1,17 +1,3 @@
-// Copyright 1996-2021 Cyberbotics Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
@@ -78,14 +64,94 @@ void tchau(RobotClient client){
 
 void walk(RobotClient client){
   const char *move;
-  const char *phase1 = "./walk/1.txt"; //"walk_ready"
-  const char *phase2 = "./walk/2.txt"; //levanta pe direito
-  const char *phase3 = "./walk/3.txt";
-  const char *phase4 = "./walk/4.txt";
-  const char *phase5 = "./walk/5.txt"; //"walk_ready'"
-  const char *phase6 = "./walk/6.txt"; //levanta pe esquerdo
-  const char *phase7 = "./walk/7.txt";
-  const char *phase8 = "./walk/8.txt";
+  const char *phase1 = "./walk/1_rev.txt"; //"walk_ready"
+  const char *phase2 = "./walk/2_rev.txt"; //levanta pe direito
+  const char *phase3 = "./walk/3_rev.txt";
+  const char *phase4 = "./walk/4_rev.txt";
+  const char *phase5 = "./walk/5_rev.txt"; //"walk_ready'"
+  const char *phase6 = "./walk/6_rev.txt"; //levanta pe esquerdo
+  const char *phase7 = "./walk/7_rev.txt";
+  const char *phase8 = "./walk/8_rev.txt";
+
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(50+flag_time)) move = phase1;
+    else if(time <(100+flag_time)) move = phase2;
+    else if(time <(150+flag_time)) move = phase3;
+    else if(time <(200+flag_time)) move = phase4;
+    else if(time <(250+flag_time)) move = phase5;
+    else if(time <(300+flag_time)) move = phase6;
+    else if(time <(350+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      //stop_wave++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+
+}
+
+void turn_right(RobotClient client){
+  const char *move;
+  const char *phase1 = "./turn_right/1.txt"; //"walk_ready"
+  const char *phase2 = "./turn_right/2.txt"; //levanta pe direito
+  const char *phase3 = "./turn_right/3.txt";
+  const char *phase4 = "./turn_right/4.txt";
+  const char *phase5 = "./turn_right/5.txt"; //"turn_right_ready'"
+  const char *phase6 = "./turn_right/6.txt"; //levanta pe esquerdo
+  const char *phase7 = "./turn_right/7.txt";
+  const char *phase8 = "./turn_right/8.txt";
+
+
+  SensorMeasurements sensors = client.receive();
+  int time = sensors.time();
+
+  if(stop_walk<5)
+  {
+    if(flag == 0) flag_time = time;
+    flag++;
+
+    if(time<(50+flag_time)) move = phase1;
+    else if(time <(100+flag_time)) move = phase2;
+    else if(time <(150+flag_time)) move = phase3;
+    else if(time <(200+flag_time)) move = phase4;
+    else if(time <(250+flag_time)) move = phase5;
+    else if(time <(300+flag_time)) move = phase6;
+    else if(time <(350+flag_time)) move = phase7;
+    else
+    {
+      move = phase8;
+      flag = 0;
+      //stop_wave++;
+    }
+  }
+
+  ActuatorRequests request = RobotClient::buildRequestMessage(move);
+  client.sendRequest(request);
+
+}
+
+void turn_left(RobotClient client){
+  const char *move;
+  const char *phase1 = "./turn_left/1.txt"; //"walk_ready"
+  const char *phase2 = "./turn_left/2.txt"; //levanta pe direito
+  const char *phase3 = "./turn_left/3.txt";
+  const char *phase4 = "./turn_left/4.txt";
+  const char *phase5 = "./turn_left/5.txt"; //"turn_left_ready'"
+  const char *phase6 = "./turn_left/6.txt"; //levanta pe esquerdo
+  const char *phase7 = "./turn_left/7.txt";
+  const char *phase8 = "./turn_left/8.txt";
 
 
   SensorMeasurements sensors = client.receive();
@@ -366,6 +432,9 @@ int main(int argc, char *argv[]) {
 
   RobotClient client(host, port, verbosity);
   client.connectClient();
+
+  int walk_num = 0;
+  int turn_num = 0;
   
   while (client.isOk()) {
     try {
@@ -373,11 +442,22 @@ int main(int argc, char *argv[]) {
       //tchau(client);
       //walk(client);
       //kick_right_weak(client);
-      walk(client);
+      //walk(client);
       //fall_left(client);
       //fall_right(client); 
       //standup_front(client); 
       //defense_position(client);
+
+      for( int aux= 0 ; aux<5770 ; aux++){
+        
+        walk(client);
+        walk_num++;
+      }
+      for(int aux =0 ; aux<5000 && turn_num==0 ; aux++){
+          
+          turn_left(client);
+          turn_num=1;
+      }
 
 
       SensorMeasurements sensors = client.receive();
@@ -390,3 +470,4 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+
