@@ -448,16 +448,19 @@ int main(int argc, char *argv[]) {
       //standup_front(client); 
       //defense_position(client);
 
-      for( int aux= 0 ; aux<5770 ; aux++){
-        
+      for( int aux= 0 ; aux<10700 ; aux++){
+        std::cout<< "Walking" << aux << std::endl;
         walk(client);
         walk_num++;
+        if(walk_num%8 ==0){
+          turn_right(client);
+        }
       }
-      for(int aux =0 ; aux<5000 && turn_num==0 ; aux++){
-          
+      for(int aux =0 ; aux<550 && turn_num==0 ; aux++){
+          std::cout<< "Turning" << aux << std::endl;
           turn_left(client);
-          turn_num=1;
       }
+      turn_num=1;
 
 
       SensorMeasurements sensors = client.receive();
